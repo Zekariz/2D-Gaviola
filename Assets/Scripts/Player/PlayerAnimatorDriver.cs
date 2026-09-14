@@ -1,61 +1,65 @@
 using UnityEngine;
 
-namespace Gaviola.Player
+namespace YourGame.Gameplay.Player
 {
+    /// <summary>
+    /// Reads state from PlayerController every frame and pushes it into
+    /// the Animator. Also listens for the OnJumped event to fire the
+    /// jumpTrigger without a one-frame polling gap.
+    /// This component must live on the SAME GameObject as PlayerController
+    /// and Animator.
+    /// </summary>
     [RequireComponent(typeof(PlayerController))]
     [RequireComponent(typeof(Animator))]
     public class PlayerAnimatorDriver : MonoBehaviour
     {
         private PlayerController _controller;
-        private Animator _animator;
-        private SpriteRenderer _spriteRenderer;
+        private Animator         _animator;
 
-        // Hashes
-        private static readonly int SpeedHash = Animator.StringToHash("speed");
-        private static readonly int IsGroundedHash = Animator.StringToHash("isGrounded");
-        private static readonly int VelocityYHash = Animator.StringToHash("velocityY");
-        private static readonly int IsRunningHash = Animator.StringToHash("isRunning");
-        private static readonly int FacingLeftHash = Animator.StringToHash("facingLeft");
-        private static readonly int JumpTriggerHash = Animator.StringToHash("jumpTrigger");
+        // Pre-hash all parameter names once at load time.
+        // If a hash doesn't match a parameter name in Player.controller,
+        // Unity will silently ignore the Set* call — check the Animator
+        // window if transitions never fire.
+        private static readonly int SpeedHash        = Animator.StringToHash("speed");
+        private static readonly int IsGroundedHash   = Animator.StringToHash("isGrounded");
+        private static readonly int VelocityYHash    = Animator.StringToHash("velocityY");
+        private static readonly int IsRunningHash    = Animator.StringToHash("isRunning");
+        private static readonly int FacingLeftHash   = Animator.StringToHash("facingLeft");
+        private static readonly int JumpTriggerHash  = Animator.StringToHash("jumpTrigger");
 
         private void Awake()
         {
             _controller = GetComponent<PlayerController>();
-            _animator = GetComponent<Animator>();
-            _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            _animator   = GetComponent<Animator>();
         }
 
         private void OnEnable()
         {
-            _controller.OnJumpTriggered += HandleJump;
+            // Subscribe when enabled so the trigger fires on the exact frame the jump executes
+            _controller.OnJumped += HandleJump;
         }
 
         private void OnDisable()
         {
-            _controller.OnJumpTriggered -= HandleJump;
+            _controller.OnJumped -= HandleJump;
         }
 
         private void Update()
         {
-            _animator.SetFloat(SpeedHash, Mathf.Abs(_controller.Velocity.x));
-            _animator.SetBool(IsGroundedHash, _controller.IsGrounded);
-            _animator.SetFloat(VelocityYHash, _controller.Velocity.y);
-            _animator.SetBool(IsRunningHash, _controller.IsRunning);
-            _animator.SetBool(FacingLeftHash, _controller.FacingLeft);
-
-            // Note on SpriteRenderer.flipX:
-            // Since we are explicitly using the 'SpriteSheet2D-Backwards.png' to render left-facing animations 
-            // via the Animator, using flipX here would double-flip the already mirrored sprites, making them face right! 
-            // Therefore, flipX is commented out. The Animator alone handles the visual direction via the 'facingLeft' bool.
-            
-            // if (_controller.IsGrounded)
-            // {
-            //     _spriteRenderer.flipX = _controller.FacingLeft;
-            // }
+            // Push all continuous parameters every frame.
+            // HorizontalSpeed is always >= 0 (unsigned); the facingLeft bool
+            // handles which directional clip plays — we never touch flipX.
+            _animator.SetFloat(SpeedHash,       _controller.HorizontalSpeed);
+            _animator.SetBool (IsGroundedHash,  _controller.IsGrounded);
+            _animator.SetFloat(VelocityYHash,   _controller.VelocityY);
+            _animator.SetBool (IsRunningHash,   _controller.IsRunning);
+            _animator.SetBool (FacingLeftHash,  _controller.FacingLeft);
         }
 
         private void HandleJump()
         {
+            // SetTrigger is consumed in the next Animator evaluation cycle,
+            // which is guaranteed to be within 1 frame of the jump.
             _animator.SetTrigger(JumpTriggerHash);
         }
     }
