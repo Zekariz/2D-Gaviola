@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEditor;
-using Gaviola.Player;
+using YourGame.Gameplay.Player;
 
 public class SetupPlayerTool
 {
@@ -46,7 +46,7 @@ public class SetupPlayerTool
 
         // Assign GroundCheck to PlayerController using SerializedObject (since the field is private)
         SerializedObject so = new SerializedObject(pc);
-        SerializedProperty groundCheckProp = so.FindProperty("groundCheck");
+        SerializedProperty groundCheckProp = so.FindProperty("_groundCheck");
         if (groundCheckProp != null)
         {
             groundCheckProp.objectReferenceValue = groundCheck.transform;

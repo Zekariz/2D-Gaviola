@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEditor;
-using Gaviola.Player;
+using YourGame.Gameplay.Player;
 
 public class FixPlayerSetup
 {
@@ -26,7 +26,7 @@ public class FixPlayerSetup
         if (pc != null)
         {
             SerializedObject so = new SerializedObject(pc);
-            SerializedProperty groundLayerProp = so.FindProperty("groundLayer");
+            SerializedProperty groundLayerProp = so.FindProperty("_groundLayer");
             if (groundLayerProp != null)
             {
                 // Set to 'Everything' (-1) or 'Default' (1) if they haven't created a specific ground layer
