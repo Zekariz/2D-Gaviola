@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditor.Animations;
 using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 using YourGame.Gameplay.Player;
 
 /// <summary>
@@ -123,7 +124,7 @@ public class FixPlayerSetup
         // ── 9. Mark dirty and save the scene so changes survive reloads ───────
         EditorUtility.SetDirty(player);
         EditorSceneManager.MarkSceneDirty(player.scene);
-        EditorSceneManager.SaveCurrentModifiedScenesWithoutAsking();
+        EditorSceneManager.SaveOpenScenes();
 
         Debug.Log("[FixPlayerSetup] Scene saved. All done — enter Play mode to test.");
     }
