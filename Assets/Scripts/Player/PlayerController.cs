@@ -178,6 +178,15 @@ namespace YourGame.Gameplay.Player
             }
         }
 
+        // ── Respawn System ────────────────────────────────────────────────────
+        public void TeleportTo(Vector3 position)
+        {
+            _rb.position = position;
+            _rb.linearVelocity = Vector2.zero;
+            _jumpBufferCounter = 0f;
+            _coyoteCounter = 0f;
+        }
+
         // ── Gizmos ────────────────────────────────────────────────────────────
         private void OnDrawGizmosSelected()
         {
