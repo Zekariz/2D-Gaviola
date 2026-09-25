@@ -1,0 +1,912 @@
+fileFormatVersion: 2
+guid: 230c179903d4fb0479501d186764c445
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5092765614089852899
+    second: SpriteSheet2D-Backwards_0
+  - first:
+      213: 9124886393942760034
+    second: SpriteSheet2D-Backwards_1
+  - first:
+      213: 2232463398630953493
+    second: SpriteSheet2D-Backwards_2
+  - first:
+      213: -4804109010885348761
+    second: SpriteSheet2D-Backwards_3
+  - first:
+      213: -7028973995740334009
+    second: SpriteSheet2D-Backwards_4
+  - first:
+      213: -1226263269910259755
+    second: SpriteSheet2D-Backwards_5
+  - first:
+      213: -6132724117907438348
+    second: SpriteSheet2D-Backwards_6
+  - first:
+      213: -5536452758261266878
+    second: SpriteSheet2D-Backwards_7
+  - first:
+      213: -5855118970215747906
+    second: SpriteSheet2D-Backwards_8
+  - first:
+      213: -2861761586603423048
+    second: SpriteSheet2D-Backwards_9
+  - first:
+      213: 8362961539047046534
+    second: SpriteSheet2D-Backwards_10
+  - first:
+      213: -4655231152002712155
+    second: SpriteSheet2D-Backwards_11
+  - first:
+      213: -6068777544322420188
+    second: SpriteSheet2D-Backwards_12
+  - first:
+      213: 8503298065976435204
+    second: SpriteSheet2D-Backwards_13
+  - first:
+      213: -8896984284420091045
+    second: SpriteSheet2D-Backwards_14
+  - first:
+      213: 6315507730046099056
+    second: SpriteSheet2D-Backwards_15
+  - first:
+      213: 5285947047004277048
+    second: SpriteSheet2D-Backwards_16
+  - first:
+      213: -585565986750217858
+    second: SpriteSheet2D-Backwards_17
+  - first:
+      213: -7508904613756683856
+    second: SpriteSheet2D-Backwards_18
+  - first:
+      213: -877414557831879784
+    second: SpriteSheet2D-Backwards_19
+  - first:
+      213: 2422038355696955394
+    second: SpriteSheet2D-Backwards_20
+  - first:
+      213: 4953003638085107534
+    second: SpriteSheet2D-Backwards_21
+  - first:
+      213: 7778589480328049955
+    second: SpriteSheet2D-Backwards_22
+  - first:
+      213: 7585390198203677836
+    second: SpriteSheet2D-Backwards_23
+  - first:
+      213: 9069412193350451123
+    second: SpriteSheet2D-Backwards_24
+  - first:
+      213: -6849629013790579813
+    second: SpriteSheet2D-Backwards_25
+  - first:
+      213: -1352246256086220234
+    second: SpriteSheet2D-Backwards_26
+  - first:
+      213: 6441112498022330723
+    second: SpriteSheet2D-Backwards_27
+  - first:
+      213: 9171066932261241291
+    second: SpriteSheet2D-Backwards_28
+  - first:
+      213: 401981565693803471
+    second: SpriteSheet2D-Backwards_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 366
+        width: 72
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d18a9d718acd259b0800000000000000
+      internalID: -5092765614089852899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_1
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 367
+        width: 102
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26ad0ce54db12ae70800000000000000
+      internalID: 9124886393942760034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_2
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 367
+        width: 101
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 512957902ad4bfe10800000000000000
+      internalID: 2232463398630953493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_3
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 366
+        width: 100
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 762fcefce40645db0800000000000000
+      internalID: -4804109010885348761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_4
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 366
+        width: 104
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74870785461147e90800000000000000
+      internalID: -7028973995740334009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_5
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 367
+        width: 102
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d7d3e39d007bfee0800000000000000
+      internalID: -1226263269910259755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_6
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 366
+        width: 103
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f408a648ef24eaa0800000000000000
+      internalID: -6132724117907438348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_7
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 367
+        width: 99
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2460b1cbc819a23b0800000000000000
+      internalID: -5536452758261266878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_8
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 367
+        width: 102
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebea3ae71507ebea0800000000000000
+      internalID: -5855118970215747906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_9
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 367
+        width: 74
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ba05aecffaf848d0800000000000000
+      internalID: -2861761586603423048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_10
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 194
+        width: 131
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68d372df5353f0470800000000000000
+      internalID: 8362961539047046534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_11
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 195
+        width: 128
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5adbb858eeb456fb0800000000000000
+      internalID: -4655231152002712155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_12
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 199
+        width: 129
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4227bc92afe57cba0800000000000000
+      internalID: -6068777544322420188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_13
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 205
+        width: 142
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 402aac1e988c10670800000000000000
+      internalID: 8503298065976435204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_14
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 196
+        width: 144
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5358ea7eef878480800000000000000
+      internalID: -8896984284420091045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_15
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 192
+        width: 138
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e91a9c1d035a750800000000000000
+      internalID: 6315507730046099056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_16
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 191
+        width: 134
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 839073645d47b5940800000000000000
+      internalID: 5285947047004277048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_17
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 192
+        width: 138
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e71c33766d6afd7f0800000000000000
+      internalID: -585565986750217858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_18
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 195
+        width: 137
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b9bdb4a9030bc790800000000000000
+      internalID: -7508904613756683856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_19
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 195
+        width: 127
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 893acafbb1cc2d3f0800000000000000
+      internalID: -877414557831879784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_20
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 18
+        width: 95
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20030bf4d0fcc9120800000000000000
+      internalID: 2422038355696955394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_21
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 18
+        width: 98
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4fb743119a9cb440800000000000000
+      internalID: 4953003638085107534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_22
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 49
+        width: 100
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3253b8c6be913fb60800000000000000
+      internalID: 7778589480328049955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_23
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 56
+        width: 104
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8cf8a63238b44960800000000000000
+      internalID: 7585390198203677836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_24
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 29
+        width: 92
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bfff3a86560ddd70800000000000000
+      internalID: 9069412193350451123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_25
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 28
+        width: 93
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b93adcde3ba31f0a0800000000000000
+      internalID: -6849629013790579813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_26
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 18
+        width: 98
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6320121d13bdb3de0800000000000000
+      internalID: -1352246256086220234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_27
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 18
+        width: 93
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36133f2c0bd636950800000000000000
+      internalID: 6441112498022330723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_28
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 18
+        width: 106
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc143c4d8cc264f70800000000000000
+      internalID: 9171066932261241291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet2D-Backwards_29
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 18
+        width: 104
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcb3f6daa10249500800000000000000
+      internalID: 401981565693803471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SpriteSheet2D-Backwards_0: -5092765614089852899
+      SpriteSheet2D-Backwards_1: 9124886393942760034
+      SpriteSheet2D-Backwards_10: 8362961539047046534
+      SpriteSheet2D-Backwards_11: -4655231152002712155
+      SpriteSheet2D-Backwards_12: -6068777544322420188
+      SpriteSheet2D-Backwards_13: 8503298065976435204
+      SpriteSheet2D-Backwards_14: -8896984284420091045
+      SpriteSheet2D-Backwards_15: 6315507730046099056
+      SpriteSheet2D-Backwards_16: 5285947047004277048
+      SpriteSheet2D-Backwards_17: -585565986750217858
+      SpriteSheet2D-Backwards_18: -7508904613756683856
+      SpriteSheet2D-Backwards_19: -877414557831879784
+      SpriteSheet2D-Backwards_2: 2232463398630953493
+      SpriteSheet2D-Backwards_20: 2422038355696955394
+      SpriteSheet2D-Backwards_21: 4953003638085107534
+      SpriteSheet2D-Backwards_22: 7778589480328049955
+      SpriteSheet2D-Backwards_23: 7585390198203677836
+      SpriteSheet2D-Backwards_24: 9069412193350451123
+      SpriteSheet2D-Backwards_25: -6849629013790579813
+      SpriteSheet2D-Backwards_26: -1352246256086220234
+      SpriteSheet2D-Backwards_27: 6441112498022330723
+      SpriteSheet2D-Backwards_28: 9171066932261241291
+      SpriteSheet2D-Backwards_29: 401981565693803471
+      SpriteSheet2D-Backwards_3: -4804109010885348761
+      SpriteSheet2D-Backwards_4: -7028973995740334009
+      SpriteSheet2D-Backwards_5: -1226263269910259755
+      SpriteSheet2D-Backwards_6: -6132724117907438348
+      SpriteSheet2D-Backwards_7: -5536452758261266878
+      SpriteSheet2D-Backwards_8: -5855118970215747906
+      SpriteSheet2D-Backwards_9: -2861761586603423048
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

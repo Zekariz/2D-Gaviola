@@ -47,8 +47,8 @@ namespace YourGame.Gameplay.Player
         public bool  IsGrounded    { get; private set; }
         public bool  IsRunning     { get; private set; }
         public bool  FacingLeft    { get; private set; }
-        public float HorizontalSpeed => Mathf.Abs(_rb.velocity.x);   // always >= 0
-        public float VelocityY       => _rb.velocity.y;
+        public float HorizontalSpeed => Mathf.Abs(_rb.linearVelocity.x);   // always >= 0
+        public float VelocityY       => _rb.linearVelocity.y;
 
         /// <summary>Fires on the exact frame a jump executes.</summary>
         public event Action OnJumped;
@@ -143,15 +143,15 @@ namespace YourGame.Gameplay.Player
         {
             if (_jumpBufferCounter > 0f && _coyoteCounter > 0f)
             {
-                _rb.velocity       = new Vector2(_rb.velocity.x, _jumpForce);
+                _rb.linearVelocity       = new Vector2(_rb.linearVelocity.x, _jumpForce);
                 _jumpBufferCounter = 0f;
                 _coyoteCounter     = 0f;
                 OnJumped?.Invoke();
             }
 
             // Variable height: releasing W early cuts the arc
-            if (Input.GetKeyUp(KeyCode.W) && _rb.velocity.y > 0f)
-                _rb.velocity = new Vector2(_rb.velocity.x, _rb.velocity.y * 0.5f);
+            if (Input.GetKeyUp(KeyCode.W) && _rb.linearVelocity.y > 0f)
+                _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _rb.linearVelocity.y * 0.5f);
         }
 
         // ── Horizontal Movement ───────────────────────────────────────────────
@@ -161,18 +161,18 @@ namespace YourGame.Gameplay.Player
             float target   = _moveInput * topSpeed;
             float rate     = Mathf.Abs(target) > 0.01f ? _acceleration : _deceleration;
 
-            _rb.velocity = new Vector2(
-                Mathf.MoveTowards(_rb.velocity.x, target, rate * Time.fixedDeltaTime),
-                _rb.velocity.y
+            _rb.linearVelocity = new Vector2(
+                Mathf.MoveTowards(_rb.linearVelocity.x, target, rate * Time.fixedDeltaTime),
+                _rb.linearVelocity.y
             );
         }
 
         // ── Fall Gravity ──────────────────────────────────────────────────────
         private void ApplyFallGravity()
         {
-            if (_rb.velocity.y < 0f)
+            if (_rb.linearVelocity.y < 0f)
             {
-                _rb.velocity += Vector2.up * Physics2D.gravity.y
+                _rb.linearVelocity += Vector2.up * Physics2D.gravity.y
                                            * (_fallGravityMultiplier - 1f)
                                            * Time.fixedDeltaTime;
             }
