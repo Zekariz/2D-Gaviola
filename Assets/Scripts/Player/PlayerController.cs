@@ -39,6 +39,17 @@ namespace YourGame.Gameplay.Player
         private float _lastADownTime = -999f;
         private float _lastDDownTime = -999f;
 
+        // ── Snag-Recovery ─────────────────────────────────────────────────────
+        // PRIMARY fix: change CompositeCollider2D on the ground tilemap from
+        //   Geometry Type = Polygons  ->  Geometry Type = Outlines
+        // That eliminates the corner impulse at tile seams entirely.
+        //
+        // BACKUP fix (below, in LateUpdate): if the physics engine still zeroes
+        // velocity after FixedUpdate (seam impulse), the intended velocity is
+        // re-applied at the end of the frame before the Animator reads it.
+        private const float MinSnagRecoverySpeed = 0.8f;
+        private float       _intendedVelocityX;   // written by ApplyHorizontalMovement
+
         // ── Jump Timers ───────────────────────────────────────────────────────
         private float _coyoteCounter;
         private float _jumpBufferCounter;
@@ -127,8 +138,15 @@ namespace YourGame.Gameplay.Player
         // ── Ground & Timers ───────────────────────────────────────────────────
         private void UpdateGroundAndTimers()
         {
-            IsGrounded = _groundCheck != null &&
-                         Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _groundLayer);
+            if (_rb.linearVelocity.y > 0.1f)
+            {
+                IsGrounded = false;
+            }
+            else
+            {
+                IsGrounded = _groundCheck != null &&
+                             Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _groundLayer);
+            }
 
             if (IsGrounded)
                 _coyoteCounter = _coyoteTime;
@@ -146,6 +164,7 @@ namespace YourGame.Gameplay.Player
                 _rb.linearVelocity       = new Vector2(_rb.linearVelocity.x, _jumpForce);
                 _jumpBufferCounter = 0f;
                 _coyoteCounter     = 0f;
+                IsGrounded         = false; // Instantly prevent Animator from cancelling jump
                 OnJumped?.Invoke();
             }
 
@@ -161,10 +180,33 @@ namespace YourGame.Gameplay.Player
             float target   = _moveInput * topSpeed;
             float rate     = Mathf.Abs(target) > 0.01f ? _acceleration : _deceleration;
 
-            _rb.linearVelocity = new Vector2(
-                Mathf.MoveTowards(_rb.linearVelocity.x, target, rate * Time.fixedDeltaTime),
-                _rb.linearVelocity.y
-            );
+            float newVelocityX = Mathf.MoveTowards(_rb.linearVelocity.x, target, rate * Time.fixedDeltaTime);
+
+            // In-physics snag clamp: if a direction is held and MoveTowards produced
+            // a value below the minimum, restore the floor here (before physics resolves).
+            if (IsGrounded && _moveInput != 0f && Mathf.Abs(newVelocityX) < MinSnagRecoverySpeed)
+                newVelocityX = _moveInput * MinSnagRecoverySpeed;
+
+            _intendedVelocityX = newVelocityX;   // cache for post-physics guard
+            _rb.linearVelocity = new Vector2(newVelocityX, _rb.linearVelocity.y);
+        }
+
+        // ── Post-Physics Velocity Guard ───────────────────────────────────────
+        // The physics engine resolves collisions AFTER FixedUpdate. A tilemap
+        // CompositeCollider2D corner can produce a horizontal impulse that zeroes
+        // velocity between FixedUpdate and the next frame's Update/LateUpdate.
+        // This guard catches that case and restores the intended speed.
+        //
+        // Only fires when: grounded + direction held + velocity was snagged to zero.
+        // Releasing a key sets _moveInput=0, so deceleration is never interfered with.
+        private void LateUpdate()
+        {
+            if (IsGrounded && _moveInput != 0f &&
+                Mathf.Abs(_rb.linearVelocity.x) < 0.1f &&
+                Mathf.Abs(_intendedVelocityX)   > 0.1f)
+            {
+                _rb.linearVelocity = new Vector2(_intendedVelocityX, _rb.linearVelocity.y);
+            }
         }
 
         // ── Fall Gravity ──────────────────────────────────────────────────────
