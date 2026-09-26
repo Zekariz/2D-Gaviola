@@ -58,7 +58,7 @@ namespace YourGame.Gameplay.Player
         public bool  IsGrounded    { get; private set; }
         public bool  IsRunning     { get; private set; }
         public bool  FacingLeft    { get; private set; }
-        public float HorizontalSpeed => Mathf.Abs(_rb.linearVelocity.x);   // always >= 0
+        public float HorizontalSpeed => Mathf.Abs(_rb.linearVelocity.x - _surfaceVelocity.x);   // always >= 0
         public float VelocityY       => _rb.linearVelocity.y;
 
         /// <summary>Fires on the exact frame a jump executes.</summary>
@@ -135,17 +135,36 @@ namespace YourGame.Gameplay.Player
                 _jumpBufferCounter = _jumpBufferTime;
         }
 
+        private Vector2 _surfaceVelocity;
+
         // ── Ground & Timers ───────────────────────────────────────────────────
         private void UpdateGroundAndTimers()
         {
-            if (_rb.linearVelocity.y > 0.1f)
+            Collider2D hit = _groundCheck != null ? Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _groundLayer) : null;
+            
+            if (hit != null)
+            {
+                var movingPlatform = hit.GetComponent<YourGame.Gameplay.Environment.MovingPlatform>();
+                if (movingPlatform != null)
+                    _surfaceVelocity = movingPlatform.Velocity;
+                else if (hit.attachedRigidbody != null)
+                    _surfaceVelocity = hit.attachedRigidbody.linearVelocity;
+                else
+                    _surfaceVelocity = Vector2.zero;
+            }
+            else
+            {
+                _surfaceVelocity = Vector2.zero;
+            }
+
+            // If we are moving up faster than the surface we are standing on, we must be jumping or falling up.
+            if (_rb.linearVelocity.y > _surfaceVelocity.y + 0.1f)
             {
                 IsGrounded = false;
             }
             else
             {
-                IsGrounded = _groundCheck != null &&
-                             Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _groundLayer);
+                IsGrounded = hit != null;
             }
 
             if (IsGrounded)
@@ -180,15 +199,20 @@ namespace YourGame.Gameplay.Player
             float target   = _moveInput * topSpeed;
             float rate     = Mathf.Abs(target) > 0.01f ? _acceleration : _deceleration;
 
-            float newVelocityX = Mathf.MoveTowards(_rb.linearVelocity.x, target, rate * Time.fixedDeltaTime);
+            // Isolate the player's true internal velocity by stripping out the surface velocity
+            float currentSelfVelocityX = _rb.linearVelocity.x - _surfaceVelocity.x;
 
-            // In-physics snag clamp: if a direction is held and MoveTowards produced
-            // a value below the minimum, restore the floor here (before physics resolves).
-            if (IsGrounded && _moveInput != 0f && Mathf.Abs(newVelocityX) < MinSnagRecoverySpeed)
-                newVelocityX = _moveInput * MinSnagRecoverySpeed;
+            // Accelerate/Decelerate ONLY the internal velocity
+            float newSelfVelocityX = Mathf.MoveTowards(currentSelfVelocityX, target, rate * Time.fixedDeltaTime);
 
-            _intendedVelocityX = newVelocityX;   // cache for post-physics guard
-            _rb.linearVelocity = new Vector2(newVelocityX, _rb.linearVelocity.y);
+            // In-physics snag clamp
+            if (IsGrounded && _moveInput != 0f && Mathf.Abs(newSelfVelocityX) < MinSnagRecoverySpeed)
+                newSelfVelocityX = _moveInput * MinSnagRecoverySpeed;
+
+            // Re-apply the surface velocity for the final world velocity
+            _intendedVelocityX = newSelfVelocityX + _surfaceVelocity.x;   
+            
+            _rb.linearVelocity = new Vector2(_intendedVelocityX, _rb.linearVelocity.y);
         }
 
         // ── Post-Physics Velocity Guard ───────────────────────────────────────
@@ -202,8 +226,8 @@ namespace YourGame.Gameplay.Player
         private void LateUpdate()
         {
             if (IsGrounded && _moveInput != 0f &&
-                Mathf.Abs(_rb.linearVelocity.x) < 0.1f &&
-                Mathf.Abs(_intendedVelocityX)   > 0.1f)
+                Mathf.Abs(_rb.linearVelocity.x - _surfaceVelocity.x) < 0.1f &&
+                Mathf.Abs(_intendedVelocityX - _surfaceVelocity.x) > 0.1f)
             {
                 _rb.linearVelocity = new Vector2(_intendedVelocityX, _rb.linearVelocity.y);
             }
