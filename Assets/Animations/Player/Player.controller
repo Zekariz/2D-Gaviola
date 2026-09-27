@@ -733,6 +733,18 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 0
+--- !u!114 &-3217575299139160263
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ce64389f0fac0547b56258f3fa0ef83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YourGame.Gameplay.Player.IdleWaitRandomizer
 --- !u!1101 &-3115135461199175416
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1270,6 +1282,18 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 0
+--- !u!114 &371779037903794650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ce64389f0fac0547b56258f3fa0ef83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YourGame.Gameplay.Player.IdleWaitRandomizer
 --- !u!1101 &477096593174485386
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

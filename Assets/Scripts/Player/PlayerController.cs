@@ -44,11 +44,6 @@ namespace YourGame.Gameplay.Player
         //   Geometry Type = Polygons  ->  Geometry Type = Outlines
         // That eliminates the corner impulse at tile seams entirely.
         //
-        // BACKUP fix (below, in LateUpdate): if the physics engine still zeroes
-        // velocity after FixedUpdate (seam impulse), the intended velocity is
-        // re-applied at the end of the frame before the Animator reads it.
-        private const float MinSnagRecoverySpeed = 0.8f;
-        private float       _intendedVelocityX;   // written by ApplyHorizontalMovement
 
         // ── Jump Timers ───────────────────────────────────────────────────────
         private float _coyoteCounter;
@@ -91,9 +86,39 @@ namespace YourGame.Gameplay.Player
             ApplyFallGravity();
         }
 
+        // ── Input Enable / Disable (used by VictoryScreen) ────────────────────
+        private bool _inputEnabled = true;
+
+        /// <summary>
+        /// Enables or disables all player input. Call with <c>false</c> to freeze
+        /// the player at the finish line while the victory screen is shown.
+        /// </summary>
+        public void SetInputEnabled(bool enabled)
+        {
+            _inputEnabled = enabled;
+            if (!enabled)
+            {
+                // Zero out all movement state immediately
+                _moveInput        = 0f;
+                _isHoldingA       = false;
+                _isHoldingD       = false;
+                _jumpBufferCounter = 0f;
+                IsRunning         = false;
+            }
+        }
+
         // ── Input ─────────────────────────────────────────────────────────────
         private void GatherInput()
         {
+            // Victory / UI screen — drop all input
+            if (!_inputEnabled)
+            {
+                _moveInput = 0f;
+                _isHoldingA = false;
+                _isHoldingD = false;
+                return;
+            }
+
             _isHoldingA = Input.GetKey(KeyCode.A);
             _isHoldingD = Input.GetKey(KeyCode.D);
 
@@ -140,15 +165,35 @@ namespace YourGame.Gameplay.Player
         // ── Ground & Timers ───────────────────────────────────────────────────
         private void UpdateGroundAndTimers()
         {
-            Collider2D hit = _groundCheck != null ? Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _groundLayer) : null;
+            Vector2 checkPos = _groundCheck != null ? (Vector2)_groundCheck.position : (Vector2)transform.position;
             
-            if (hit != null)
+            // ALWAYS use the exact bottom of the physics collider if available, 
+            // bypassing any misplaced GroundCheck child transforms.
+            var myCollider = GetComponent<BoxCollider2D>();
+            if (myCollider != null)
             {
-                var movingPlatform = hit.GetComponent<YourGame.Gameplay.Environment.MovingPlatform>();
+                checkPos = (Vector2)transform.position + myCollider.offset + new Vector2(0, -myCollider.size.y / 2f);
+            }
+
+            // Find the first collider that is NOT part of the player and NOT a trigger
+            Collider2D validHit = null;
+            Collider2D[] hits = Physics2D.OverlapCircleAll(checkPos, _groundCheckRadius, _groundLayer);
+            foreach (var h in hits)
+            {
+                if (h.transform.root != transform.root && !h.isTrigger)
+                {
+                    validHit = h;
+                    break;
+                }
+            }
+            
+            if (validHit != null)
+            {
+                var movingPlatform = validHit.GetComponent<YourGame.Gameplay.Environment.MovingPlatform>();
                 if (movingPlatform != null)
                     _surfaceVelocity = movingPlatform.Velocity;
-                else if (hit.attachedRigidbody != null)
-                    _surfaceVelocity = hit.attachedRigidbody.linearVelocity;
+                else if (validHit.attachedRigidbody != null)
+                    _surfaceVelocity = validHit.attachedRigidbody.linearVelocity;
                 else
                     _surfaceVelocity = Vector2.zero;
             }
@@ -164,7 +209,7 @@ namespace YourGame.Gameplay.Player
             }
             else
             {
-                IsGrounded = hit != null;
+                IsGrounded = validHit != null;
             }
 
             if (IsGrounded)
@@ -205,32 +250,11 @@ namespace YourGame.Gameplay.Player
             // Accelerate/Decelerate ONLY the internal velocity
             float newSelfVelocityX = Mathf.MoveTowards(currentSelfVelocityX, target, rate * Time.fixedDeltaTime);
 
-            // In-physics snag clamp
-            if (IsGrounded && _moveInput != 0f && Mathf.Abs(newSelfVelocityX) < MinSnagRecoverySpeed)
-                newSelfVelocityX = _moveInput * MinSnagRecoverySpeed;
 
             // Re-apply the surface velocity for the final world velocity
-            _intendedVelocityX = newSelfVelocityX + _surfaceVelocity.x;   
+            float finalVelocityX = newSelfVelocityX + _surfaceVelocity.x;   
             
-            _rb.linearVelocity = new Vector2(_intendedVelocityX, _rb.linearVelocity.y);
-        }
-
-        // ── Post-Physics Velocity Guard ───────────────────────────────────────
-        // The physics engine resolves collisions AFTER FixedUpdate. A tilemap
-        // CompositeCollider2D corner can produce a horizontal impulse that zeroes
-        // velocity between FixedUpdate and the next frame's Update/LateUpdate.
-        // This guard catches that case and restores the intended speed.
-        //
-        // Only fires when: grounded + direction held + velocity was snagged to zero.
-        // Releasing a key sets _moveInput=0, so deceleration is never interfered with.
-        private void LateUpdate()
-        {
-            if (IsGrounded && _moveInput != 0f &&
-                Mathf.Abs(_rb.linearVelocity.x - _surfaceVelocity.x) < 0.1f &&
-                Mathf.Abs(_intendedVelocityX - _surfaceVelocity.x) > 0.1f)
-            {
-                _rb.linearVelocity = new Vector2(_intendedVelocityX, _rb.linearVelocity.y);
-            }
+            _rb.linearVelocity = new Vector2(finalVelocityX, _rb.linearVelocity.y);
         }
 
         // ── Fall Gravity ──────────────────────────────────────────────────────

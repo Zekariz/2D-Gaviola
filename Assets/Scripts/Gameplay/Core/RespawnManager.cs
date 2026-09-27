@@ -15,6 +15,8 @@ namespace YourGame.Gameplay.Core
         private float _startTime;
         private AudioSource _audioSource;
 
+        private Vector3 _currentRespawnPosition;
+
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -33,14 +35,22 @@ namespace YourGame.Gameplay.Core
             // Find player if not assigned
             _player = FindObjectOfType<PlayerController>();
             _startTime = Time.time;
+            
+            if (_spawnPoint != null)
+                _currentRespawnPosition = _spawnPoint.position;
+        }
+
+        public void SetRespawnPoint(Vector3 newPosition)
+        {
+            _currentRespawnPosition = newPosition;
         }
 
         public void Respawn()
         {
-            if (_player != null && _spawnPoint != null)
+            if (_player != null)
             {
-                Debug.Log("[RespawnManager] Player died. Respawning at start...");
-                _player.TeleportTo(_spawnPoint.position);
+                Debug.Log("[RespawnManager] Player died. Respawning...");
+                _player.TeleportTo(_currentRespawnPosition);
                 
                 PlayDeathSound();
             }

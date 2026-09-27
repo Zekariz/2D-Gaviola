@@ -8,7 +8,8 @@ namespace YourGame.Gameplay.Core
     {
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.GetComponent<PlayerController>() != null)
+            // Only kill if the HITBOX touches the hazard — not the feet/body physics collider.
+            if (collision.GetComponent<PlayerHitBox>() != null)
             {
                 RespawnManager.Instance.Respawn();
             }
@@ -16,9 +17,18 @@ namespace YourGame.Gameplay.Core
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.GetComponent<PlayerController>() != null)
+            // Fallback: If a solid collision somehow registers with the player
+            if (collision.gameObject.GetComponentInChildren<PlayerHitBox>() != null)
             {
-                RespawnManager.Instance.Respawn();
+                // Verify the HitBox itself is what's touching us
+                foreach (var contact in collision.contacts)
+                {
+                    if (contact.collider.GetComponent<PlayerHitBox>() != null)
+                    {
+                        RespawnManager.Instance.Respawn();
+                        break;
+                    }
+                }
             }
         }
     }

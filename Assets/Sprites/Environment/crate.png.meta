@@ -1,0 +1,3876 @@
+fileFormatVersion: 2
+guid: c78ac05994be4eb4ab0a4b6f62950f93
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1163504838602118676
+    second: crate_0
+  - first:
+      213: 5758118596646955673
+    second: crate_1
+  - first:
+      213: -3001479746529436847
+    second: crate_2
+  - first:
+      213: -6034346704468134786
+    second: crate_3
+  - first:
+      213: 1953256079159735605
+    second: crate_4
+  - first:
+      213: -5438378077045296479
+    second: crate_5
+  - first:
+      213: 6286528752387165059
+    second: crate_6
+  - first:
+      213: 2368646309545117941
+    second: crate_7
+  - first:
+      213: -1035733848884165838
+    second: crate_8
+  - first:
+      213: 4095856296303510459
+    second: crate_9
+  - first:
+      213: 5634117031272871679
+    second: crate_10
+  - first:
+      213: -7421676479910402900
+    second: crate_11
+  - first:
+      213: 5363007892386702921
+    second: crate_12
+  - first:
+      213: 3528923341018149779
+    second: crate_13
+  - first:
+      213: 7300365772839162909
+    second: crate_14
+  - first:
+      213: 3978702462255540888
+    second: crate_15
+  - first:
+      213: -1581290253905102414
+    second: crate_16
+  - first:
+      213: -7603550215502395624
+    second: crate_17
+  - first:
+      213: 2993427159332972477
+    second: crate_18
+  - first:
+      213: 6896939392447511581
+    second: crate_19
+  - first:
+      213: 4801628590561281158
+    second: crate_20
+  - first:
+      213: -8406594182474475529
+    second: crate_21
+  - first:
+      213: -8647166265417741340
+    second: crate_22
+  - first:
+      213: -3193795125441667821
+    second: crate_23
+  - first:
+      213: 7653331253289176479
+    second: crate_24
+  - first:
+      213: -3379459256331501598
+    second: crate_25
+  - first:
+      213: 2721074232452210617
+    second: crate_26
+  - first:
+      213: 2209971438351284253
+    second: crate_27
+  - first:
+      213: -1547366622938421894
+    second: crate_28
+  - first:
+      213: 4896192176880033395
+    second: crate_29
+  - first:
+      213: -6275246526374633229
+    second: crate_30
+  - first:
+      213: 8718765926809984848
+    second: crate_31
+  - first:
+      213: -2230389802615935048
+    second: crate_32
+  - first:
+      213: -1023606294529000068
+    second: crate_33
+  - first:
+      213: 8413776544225031703
+    second: crate_34
+  - first:
+      213: -7014254073635916094
+    second: crate_35
+  - first:
+      213: 7817847823305201664
+    second: crate_36
+  - first:
+      213: -5899599111330833526
+    second: crate_37
+  - first:
+      213: 2311868495271338592
+    second: crate_38
+  - first:
+      213: -7000196927912015709
+    second: crate_39
+  - first:
+      213: -4012523198455199229
+    second: crate_40
+  - first:
+      213: -7837636798690078187
+    second: crate_41
+  - first:
+      213: 235595523585756535
+    second: crate_42
+  - first:
+      213: 2616562189905339370
+    second: crate_43
+  - first:
+      213: -2008634407571285337
+    second: crate_44
+  - first:
+      213: -2871553873091214645
+    second: crate_45
+  - first:
+      213: -6270928629484630304
+    second: crate_46
+  - first:
+      213: -66494424164559012
+    second: crate_47
+  - first:
+      213: 1507258440004932501
+    second: crate_48
+  - first:
+      213: 5087391685718547883
+    second: crate_49
+  - first:
+      213: -1772121590018454357
+    second: crate_50
+  - first:
+      213: -428751863602797283
+    second: crate_51
+  - first:
+      213: -1729365403829472965
+    second: crate_52
+  - first:
+      213: 5167950371841698164
+    second: crate_53
+  - first:
+      213: 6448836361007942427
+    second: crate_54
+  - first:
+      213: 3979583896901096369
+    second: crate_55
+  - first:
+      213: 1030814919211288568
+    second: crate_56
+  - first:
+      213: 3919421929616970923
+    second: crate_57
+  - first:
+      213: 6511199050279831100
+    second: crate_58
+  - first:
+      213: 6299321606579415398
+    second: crate_59
+  - first:
+      213: 4920924335930224180
+    second: crate_60
+  - first:
+      213: -5830661293105872608
+    second: crate_61
+  - first:
+      213: -4546837516692386599
+    second: crate_62
+  - first:
+      213: -2053725586510865824
+    second: crate_63
+  - first:
+      213: -8665433736709775971
+    second: crate_64
+  - first:
+      213: -1155922280798747576
+    second: crate_65
+  - first:
+      213: 2955649827296769429
+    second: crate_66
+  - first:
+      213: -8957785599297407557
+    second: crate_67
+  - first:
+      213: -3591865347869349397
+    second: crate_68
+  - first:
+      213: -2860670891352637100
+    second: crate_69
+  - first:
+      213: -1696847728752601010
+    second: crate_70
+  - first:
+      213: 940112444888547145
+    second: crate_71
+  - first:
+      213: 4554430729671830570
+    second: crate_72
+  - first:
+      213: -7356306725814578031
+    second: crate_73
+  - first:
+      213: -9178343196239456077
+    second: crate_74
+  - first:
+      213: -6403121243813213416
+    second: crate_75
+  - first:
+      213: 3039285292084568888
+    second: crate_76
+  - first:
+      213: 8532987230415682837
+    second: crate_77
+  - first:
+      213: -8508435194145580450
+    second: crate_78
+  - first:
+      213: -3572933906220959786
+    second: crate_79
+  - first:
+      213: -6061389419269093786
+    second: crate_80
+  - first:
+      213: -1870959666316616486
+    second: crate_81
+  - first:
+      213: -7342500744880996754
+    second: crate_82
+  - first:
+      213: -1324840454514989672
+    second: crate_83
+  - first:
+      213: -6699249829494530671
+    second: crate_84
+  - first:
+      213: 3862070284360833716
+    second: crate_85
+  - first:
+      213: 2143062384783988570
+    second: crate_86
+  - first:
+      213: -8240452050133801523
+    second: crate_87
+  - first:
+      213: -5154829171877474198
+    second: crate_88
+  - first:
+      213: -9081213147942002250
+    second: crate_89
+  - first:
+      213: -2512837079427229253
+    second: crate_90
+  - first:
+      213: 7993144117625063824
+    second: crate_91
+  - first:
+      213: -9117032532226335549
+    second: crate_92
+  - first:
+      213: 399308141030076772
+    second: crate_93
+  - first:
+      213: -672017022460028107
+    second: crate_94
+  - first:
+      213: -7800973473186706361
+    second: crate_95
+  - first:
+      213: 3783786146653065845
+    second: crate_96
+  - first:
+      213: 8669619434105043741
+    second: crate_97
+  - first:
+      213: -1073252500390842040
+    second: crate_98
+  - first:
+      213: -4793631693487358257
+    second: crate_99
+  - first:
+      213: -7327388424737264506
+    second: crate_100
+  - first:
+      213: 7971784086160918975
+    second: crate_101
+  - first:
+      213: -7999939021348992727
+    second: crate_102
+  - first:
+      213: -6915672141859044695
+    second: crate_103
+  - first:
+      213: -5646843988003319533
+    second: crate_104
+  - first:
+      213: -7949705929845418975
+    second: crate_105
+  - first:
+      213: 2738839949112801618
+    second: crate_106
+  - first:
+      213: -4748811101400515180
+    second: crate_107
+  - first:
+      213: -6689640323464650128
+    second: crate_108
+  - first:
+      213: -4659394013933457597
+    second: crate_109
+  - first:
+      213: -3751787091168711061
+    second: crate_110
+  - first:
+      213: -2337070471794475417
+    second: crate_111
+  - first:
+      213: -1228242256920900583
+    second: crate_112
+  - first:
+      213: 8835305872512875517
+    second: crate_113
+  - first:
+      213: 6955234575024882052
+    second: crate_114
+  - first:
+      213: -8264823538072287633
+    second: crate_115
+  - first:
+      213: 8587974003728353500
+    second: crate_116
+  - first:
+      213: 4339583389050176737
+    second: crate_117
+  - first:
+      213: -1465453641607610202
+    second: crate_118
+  - first:
+      213: 3524188049075076591
+    second: crate_119
+  - first:
+      213: -6176480355111686827
+    second: crate_120
+  - first:
+      213: -41968433593270433
+    second: crate_121
+  - first:
+      213: -6556407052380755114
+    second: crate_122
+  - first:
+      213: -2101380365161617665
+    second: crate_123
+  - first:
+      213: 2019660805640959033
+    second: crate_124
+  - first:
+      213: 5046274329333883164
+    second: crate_125
+  - first:
+      213: -4941384455947524749
+    second: crate_126
+  - first:
+      213: 4173279846891887740
+    second: crate_127
+  - first:
+      213: 7452094974033755917
+    second: crate_128
+  - first:
+      213: -4720566793616919742
+    second: crate_129
+  - first:
+      213: 6029945474564800461
+    second: crate_130
+  - first:
+      213: 6110404472487678147
+    second: crate_131
+  - first:
+      213: -4192014557883882179
+    second: crate_132
+  - first:
+      213: 4775042366111724542
+    second: crate_133
+  - first:
+      213: 624878653060736928
+    second: crate_134
+  - first:
+      213: -8570073082744935346
+    second: crate_135
+  - first:
+      213: 1265426809844900817
+    second: crate_136
+  - first:
+      213: -860323451945223713
+    second: crate_137
+  - first:
+      213: -497912325430384992
+    second: crate_138
+  - first:
+      213: -8852893209799611087
+    second: crate_139
+  - first:
+      213: -7067110673913429030
+    second: crate_140
+  - first:
+      213: -3328263343693353748
+    second: crate_141
+  - first:
+      213: 3911723893931910820
+    second: crate_142
+  - first:
+      213: 454599155415697034
+    second: crate_143
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: crate_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 538
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce92ca883866adfe0800000000000000
+      internalID: -1163504838602118676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 538
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99a66b71b52f8ef40800000000000000
+      internalID: 5758118596646955673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 538
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15b5593b21a9856d0800000000000000
+      internalID: -3001479746529436847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_3
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 538
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e74b0a4c4a1b14ca0800000000000000
+      internalID: -6034346704468134786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_4
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 538
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53530b12e0c5b1b10800000000000000
+      internalID: 1953256079159735605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_5
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 538
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a27173e3fff684b0800000000000000
+      internalID: -5438378077045296479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_6
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 538
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b0154c79c3e3750800000000000000
+      internalID: 6286528752387165059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_7
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 478
+        width: 51
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f80af6d44f1fd020800000000000000
+      internalID: 2368646309545117941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_8
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 478
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 233496f4d8550a1f0800000000000000
+      internalID: -1035733848884165838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_9
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 478
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb3c738c99767d830800000000000000
+      internalID: 4095856296303510459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 478
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff67fffc697603e40800000000000000
+      internalID: 5634117031272871679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_11
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 478
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca4a1113098e00990800000000000000
+      internalID: -7421676479910402900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_12
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 478
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9466351834b3d6a40800000000000000
+      internalID: 5363007892386702921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_13
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 478
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 393b8f4e41149f030800000000000000
+      internalID: 3528923341018149779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_14
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 478
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d149f7ccdfb105560800000000000000
+      internalID: 7300365772839162909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_15
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 478
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89aa6b13fc0373730800000000000000
+      internalID: 3978702462255540888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_16
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 478
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b9f23164e02e0ae0800000000000000
+      internalID: -1581290253905102414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_17
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 418
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81782254d53ca7690800000000000000
+      internalID: -7603550215502395624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_18
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 418
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db76c0d342aca8920800000000000000
+      internalID: 2993427159332972477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 418
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1c7b3cf5d9d6bf50800000000000000
+      internalID: 6896939392447511581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_20
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 418
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 684c3c353cfc2a240800000000000000
+      internalID: 4801628590561281158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_21
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 418
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f75ebe8127c55b80800000000000000
+      internalID: -8406594182474475529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_22
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 418
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ebc804a8181ff780800000000000000
+      internalID: -8647166265417741340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_23
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 418
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31ddcae314c5da3d0800000000000000
+      internalID: -3193795125441667821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_24
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 421
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9d42bcc938163a60800000000000000
+      internalID: 7653331253289176479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_25
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 418
+        width: 54
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ef747526bfb911d0800000000000000
+      internalID: -3379459256331501598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_26
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 418
+        width: 51
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf58c8f89233c520800000000000000
+      internalID: 2721074232452210617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_27
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 358
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d18ffa270556bae10800000000000000
+      internalID: 2209971438351284253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_28
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 358
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a75a5763146a68ae0800000000000000
+      internalID: -1547366622938421894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_29
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 358
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37e1bfef7d4c2f340800000000000000
+      internalID: 4896192176880033395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_30
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 358
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f0af6d2888d9e8a0800000000000000
+      internalID: -6275246526374633229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_31
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 358
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05fd94b9a674ff870800000000000000
+      internalID: 8718765926809984848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_32
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 358
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bf6c68aa401c01e0800000000000000
+      internalID: -2230389802615935048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_33
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 358
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7dbeb89f7b6bc1f0800000000000000
+      internalID: -1023606294529000068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_34
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 358
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 716fb0a503db3c470800000000000000
+      internalID: 8413776544225031703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_35
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 298
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c63898451d58ae90800000000000000
+      internalID: -7014254073635916094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_36
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 298
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 008da20bc239e7c60800000000000000
+      internalID: 7817847823305201664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_37
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 298
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8b5aeb9dd9602ea0800000000000000
+      internalID: -5899599111330833526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_38
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 298
+        width: 59
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 062a01cc528651020800000000000000
+      internalID: 2311868495271338592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_39
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 298
+        width: 60
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a806029bfd4ade90800000000000000
+      internalID: -7000196927912015709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_40
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 336
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30a40170967a058c0800000000000000
+      internalID: -4012523198455199229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_41
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 338
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5125c8f6bde1b3390800000000000000
+      internalID: -7837636798690078187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_42
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 296
+        width: 53
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77d400661e0054300800000000000000
+      internalID: 235595523585756535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_43
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 336
+        width: 29
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae3a606d275ef4420800000000000000
+      internalID: 2616562189905339370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_44
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 328
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aa161506a5ef14e0800000000000000
+      internalID: -2008634407571285337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_45
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 298
+        width: 46
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc2400177f03628d0800000000000000
+      internalID: -2871553873091214645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_46
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 303
+        width: 53
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eecdb3e2af29f8a0800000000000000
+      internalID: -6270928629484630304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_47
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 323
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c57902c6ca3c31ff0800000000000000
+      internalID: -66494424164559012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_48
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 323
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 593143db09bdae410800000000000000
+      internalID: 1507258440004932501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_49
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 303
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bad9784b8cb0a9640800000000000000
+      internalID: 5087391685718547883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_50
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 301
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac46209dc82867e0800000000000000
+      internalID: -1772121590018454357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_51
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 238
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d152b21a374cc0af0800000000000000
+      internalID: -428751863602797283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_52
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 238
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b31f4e9e35f0008e0800000000000000
+      internalID: -1729365403829472965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_53
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 238
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 479e8727b7f38b740800000000000000
+      internalID: 5167950371841698164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_54
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 238
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1b4080c08ede7950800000000000000
+      internalID: 6448836361007942427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_55
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 243
+        width: 35
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b397a038725a3730800000000000000
+      internalID: 3979583896901096369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_56
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 264
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f703c025b03e4e00800000000000000
+      internalID: 1030814919211288568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_57
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 241
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba412bf9a75946630800000000000000
+      internalID: 3919421929616970923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_58
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 261
+        width: 13
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c364ac5d90d6c5a50800000000000000
+      internalID: 6511199050279831100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_59
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 263
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 669eb1e30afab6750800000000000000
+      internalID: 6299321606579415398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_60
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 273
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e22b18c92aa4440800000000000000
+      internalID: 4920924335930224180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_61
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 271
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0210ec23274551fa0800000000000000
+      internalID: -5830661293105872608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_62
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 243
+        width: 46
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dc81266e5366e0c0800000000000000
+      internalID: -4546837516692386599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_63
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 268
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06a93edc573bf73e0800000000000000
+      internalID: -2053725586510865824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_64
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 271
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d5aba8de13eb780800000000000000
+      internalID: -8665433736709775971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_65
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 243
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84408095fc655ffe0800000000000000
+      internalID: -1155922280798747576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_66
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 243
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 595f774bbd3940920800000000000000
+      internalID: 2955649827296769429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_67
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 253
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb5b4c3357d8fa380800000000000000
+      internalID: -8957785599297407557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_68
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 248
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be966332f71272ec0800000000000000
+      internalID: -3591865347869349397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_69
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 261
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45140a51bfadc48d0800000000000000
+      internalID: -2860670891352637100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_70
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 241
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e48d5c12bf59378e0800000000000000
+      internalID: -1696847728752601010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_71
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 243
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94f7186a943fb0d00800000000000000
+      internalID: 940112444888547145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_72
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 241
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2c66344e96943f30800000000000000
+      internalID: 4554430729671830570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_73
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 243
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 194510d120629e990800000000000000
+      internalID: -7356306725814578031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_74
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 178
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b81681fd79ff9080800000000000000
+      internalID: -9178343196239456077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_75
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 178
+        width: 11
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81b81c8672b8327a0800000000000000
+      internalID: -6403121243813213416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_76
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 196
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83325cdced5bd2a20800000000000000
+      internalID: 3039285292084568888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_77
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 169
+        width: 96
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51dfed52da24b6670800000000000000
+      internalID: 8532987230415682837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_78
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 173
+        width: 68
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5a55824547fbe980800000000000000
+      internalID: -8508435194145580450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_79
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 178
+        width: 51
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d730c1ea836a6ec0800000000000000
+      internalID: -3572933906220959786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_80
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 178
+        width: 51
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6668723107e91eba0800000000000000
+      internalID: -6061389419269093786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_81
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 178
+        width: 51
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adc5d14a8140906e0800000000000000
+      internalID: -1870959666316616486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_82
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 178
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6eb35a89723a1a90800000000000000
+      internalID: -7342500744880996754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_83
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 168
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 895219c30a83d9de0800000000000000
+      internalID: -1324840454514989672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_84
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 168
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19dd16336cb7703a0800000000000000
+      internalID: -6699249829494530671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_85
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 118
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba5be42674d89530800000000000000
+      internalID: 3862070284360833716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_86
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 118
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a571d8072efadbd10800000000000000
+      internalID: 2143062384783988570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_87
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 118
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc5a22b258804ad80800000000000000
+      internalID: -8240452050133801523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_88
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 118
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a601c6cfd2e5678b0800000000000000
+      internalID: -5154829171877474198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_89
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 118
+        width: 11
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b16f4b91cc09f180800000000000000
+      internalID: -9081213147942002250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_90
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 153
+        width: 34
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb95f466dfb902dd0800000000000000
+      internalID: -2512837079427229253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_91
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 163
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0998b89b93a5dee60800000000000000
+      internalID: 7993144117625063824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_92
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 126
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cc18fe473bc97180800000000000000
+      internalID: -9117032532226335549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_93
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 123
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 461f40e73a0aa8500800000000000000
+      internalID: 399308141030076772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_94
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 136
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53b114d14148ca6f0800000000000000
+      internalID: -672017022460028107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_95
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 133
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c067c15ff5db390800000000000000
+      internalID: -7800973473186706361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_96
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 128
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 572dc49f375b28430800000000000000
+      internalID: 3783786146653065845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_97
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 123
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1b77a311fca05870800000000000000
+      internalID: 8669619434105043741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_98
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 121
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84177e7898a0b11f0800000000000000
+      internalID: -1073252500390842040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_99
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 118
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fceb1ad5f59997db0800000000000000
+      internalID: -4793631693487358257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_100
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 123
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68ce934cc03ef4a90800000000000000
+      internalID: -7327388424737264506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_101
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 84
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb9cbb9d36771ae60800000000000000
+      internalID: 7971784086160918975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_102
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 83
+        width: 36
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92905b778d18af090800000000000000
+      internalID: -7999939021348992727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_103
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 84
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a24d69e3d89600a0800000000000000
+      internalID: -6915672141859044695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_104
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 84
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3111309af4162a1b0800000000000000
+      internalID: -5646843988003319533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_105
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 96
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1245fbe7398fca190800000000000000
+      internalID: -7949705929845418975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_106
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 83
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25974873c60520620800000000000000
+      internalID: 2738839949112801618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_107
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 91
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49d379ba675d81eb0800000000000000
+      internalID: -4748811101400515180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_108
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 86
+        width: 35
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 072a2cca19f9923a0800000000000000
+      internalID: -6689640323464650128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_109
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 84
+        width: 38
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34f2ae2b4d1865fb0800000000000000
+      internalID: -4659394013933457597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_110
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 25
+        width: 94
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6e2ef5b489feebc0800000000000000
+      internalID: -3751787091168711061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_111
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 43
+        width: 85
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76eb2a9c9ce019fd0800000000000000
+      internalID: -2337070471794475417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_112
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 43
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91c0b12cc2864fee0800000000000000
+      internalID: -1228242256920900583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_113
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 43
+        width: 36
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb7d0d21ef4d9a70800000000000000
+      internalID: 8835305872512875517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_114
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 43
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4818fdddef4f58060800000000000000
+      internalID: 6955234575024882052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_115
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 56
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f660ae1f7c27d4d80800000000000000
+      internalID: -8264823538072287633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_116
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 43
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd88488fadc9e2770800000000000000
+      internalID: 8587974003728353500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_117
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 53
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e48589a91c493c30800000000000000
+      internalID: 4339583389050176737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_118
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 58
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a00d216da9a9abe0800000000000000
+      internalID: -1465453641607610202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_119
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 48
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fedfbc2db5e68e030800000000000000
+      internalID: 3524188049075076591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_120
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 46
+        width: 35
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55da36767dbb84aa0800000000000000
+      internalID: -6176480355111686827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_121
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 46
+        width: 36
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5fb4e79ee5ea6ff0800000000000000
+      internalID: -41968433593270433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_122
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 43
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65baaffe586f205a0800000000000000
+      internalID: -6556407052380755114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_123
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 33
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff6af8401b566d2e0800000000000000
+      internalID: -2101380365161617665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_124
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 11
+        width: 61
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93432075dc6470c10800000000000000
+      internalID: 2019660805640959033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_125
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 36
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c116e1724c7f70640800000000000000
+      internalID: 5046274329333883164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_126
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 3
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3756c94940dac6bb0800000000000000
+      internalID: -4941384455947524749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_127
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 3
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7c9946e8e77ae930800000000000000
+      internalID: 4173279846891887740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_128
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 19
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0f71cf55e82b6760800000000000000
+      internalID: 7452094974033755917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_129
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 13
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24375f7038d2d7eb0800000000000000
+      internalID: -4720566793616919742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_130
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 28
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcfb86a067baea350800000000000000
+      internalID: 6029945474564800461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_131
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 3
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c016905e748cc450800000000000000
+      internalID: 6110404472487678147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_132
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 9
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d35a01848f8f2d5c0800000000000000
+      internalID: -4192014557883882179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_133
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 3
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef3b7839bbb544240800000000000000
+      internalID: 4775042366111724542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_134
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 8
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a7e86ff2d30ca800800000000000000
+      internalID: 624878653060736928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_135
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 6
+        width: 35
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4ce9dbffebf01980800000000000000
+      internalID: -8570073082744935346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_136
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 6
+        width: 36
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d3af02aaf2bf8110800000000000000
+      internalID: 1265426809844900817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_137
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 0
+        width: 35
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd9fddee0648f04f0800000000000000
+      internalID: -860323451945223713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_138
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 0
+        width: 36
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a6ee69c06f0719f0800000000000000
+      internalID: -497912325430384992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_139
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 0
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d2d63c784342580800000000000000
+      internalID: -8852893209799611087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_140
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 0
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad3c40509449ced90800000000000000
+      internalID: -7067110673913429030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_141
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 0
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cec24307f12afc1d0800000000000000
+      internalID: -3328263343693353748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_142
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 0
+        width: 21
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a62835082c394630800000000000000
+      internalID: 3911723893931910820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crate_143
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 26
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a86ceb5f58f0f4600800000000000000
+      internalID: 454599155415697034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      crate_0: -1163504838602118676
+      crate_1: 5758118596646955673
+      crate_10: 5634117031272871679
+      crate_100: -7327388424737264506
+      crate_101: 7971784086160918975
+      crate_102: -7999939021348992727
+      crate_103: -6915672141859044695
+      crate_104: -5646843988003319533
+      crate_105: -7949705929845418975
+      crate_106: 2738839949112801618
+      crate_107: -4748811101400515180
+      crate_108: -6689640323464650128
+      crate_109: -4659394013933457597
+      crate_11: -7421676479910402900
+      crate_110: -3751787091168711061
+      crate_111: -2337070471794475417
+      crate_112: -1228242256920900583
+      crate_113: 8835305872512875517
+      crate_114: 6955234575024882052
+      crate_115: -8264823538072287633
+      crate_116: 8587974003728353500
+      crate_117: 4339583389050176737
+      crate_118: -1465453641607610202
+      crate_119: 3524188049075076591
+      crate_12: 5363007892386702921
+      crate_120: -6176480355111686827
+      crate_121: -41968433593270433
+      crate_122: -6556407052380755114
+      crate_123: -2101380365161617665
+      crate_124: 2019660805640959033
+      crate_125: 5046274329333883164
+      crate_126: -4941384455947524749
+      crate_127: 4173279846891887740
+      crate_128: 7452094974033755917
+      crate_129: -4720566793616919742
+      crate_13: 3528923341018149779
+      crate_130: 6029945474564800461
+      crate_131: 6110404472487678147
+      crate_132: -4192014557883882179
+      crate_133: 4775042366111724542
+      crate_134: 624878653060736928
+      crate_135: -8570073082744935346
+      crate_136: 1265426809844900817
+      crate_137: -860323451945223713
+      crate_138: -497912325430384992
+      crate_139: -8852893209799611087
+      crate_14: 7300365772839162909
+      crate_140: -7067110673913429030
+      crate_141: -3328263343693353748
+      crate_142: 3911723893931910820
+      crate_143: 454599155415697034
+      crate_15: 3978702462255540888
+      crate_16: -1581290253905102414
+      crate_17: -7603550215502395624
+      crate_18: 2993427159332972477
+      crate_19: 6896939392447511581
+      crate_2: -3001479746529436847
+      crate_20: 4801628590561281158
+      crate_21: -8406594182474475529
+      crate_22: -8647166265417741340
+      crate_23: -3193795125441667821
+      crate_24: 7653331253289176479
+      crate_25: -3379459256331501598
+      crate_26: 2721074232452210617
+      crate_27: 2209971438351284253
+      crate_28: -1547366622938421894
+      crate_29: 4896192176880033395
+      crate_3: -6034346704468134786
+      crate_30: -6275246526374633229
+      crate_31: 8718765926809984848
+      crate_32: -2230389802615935048
+      crate_33: -1023606294529000068
+      crate_34: 8413776544225031703
+      crate_35: -7014254073635916094
+      crate_36: 7817847823305201664
+      crate_37: -5899599111330833526
+      crate_38: 2311868495271338592
+      crate_39: -7000196927912015709
+      crate_4: 1953256079159735605
+      crate_40: -4012523198455199229
+      crate_41: -7837636798690078187
+      crate_42: 235595523585756535
+      crate_43: 2616562189905339370
+      crate_44: -2008634407571285337
+      crate_45: -2871553873091214645
+      crate_46: -6270928629484630304
+      crate_47: -66494424164559012
+      crate_48: 1507258440004932501
+      crate_49: 5087391685718547883
+      crate_5: -5438378077045296479
+      crate_50: -1772121590018454357
+      crate_51: -428751863602797283
+      crate_52: -1729365403829472965
+      crate_53: 5167950371841698164
+      crate_54: 6448836361007942427
+      crate_55: 3979583896901096369
+      crate_56: 1030814919211288568
+      crate_57: 3919421929616970923
+      crate_58: 6511199050279831100
+      crate_59: 6299321606579415398
+      crate_6: 6286528752387165059
+      crate_60: 4920924335930224180
+      crate_61: -5830661293105872608
+      crate_62: -4546837516692386599
+      crate_63: -2053725586510865824
+      crate_64: -8665433736709775971
+      crate_65: -1155922280798747576
+      crate_66: 2955649827296769429
+      crate_67: -8957785599297407557
+      crate_68: -3591865347869349397
+      crate_69: -2860670891352637100
+      crate_7: 2368646309545117941
+      crate_70: -1696847728752601010
+      crate_71: 940112444888547145
+      crate_72: 4554430729671830570
+      crate_73: -7356306725814578031
+      crate_74: -9178343196239456077
+      crate_75: -6403121243813213416
+      crate_76: 3039285292084568888
+      crate_77: 8532987230415682837
+      crate_78: -8508435194145580450
+      crate_79: -3572933906220959786
+      crate_8: -1035733848884165838
+      crate_80: -6061389419269093786
+      crate_81: -1870959666316616486
+      crate_82: -7342500744880996754
+      crate_83: -1324840454514989672
+      crate_84: -6699249829494530671
+      crate_85: 3862070284360833716
+      crate_86: 2143062384783988570
+      crate_87: -8240452050133801523
+      crate_88: -5154829171877474198
+      crate_89: -9081213147942002250
+      crate_9: 4095856296303510459
+      crate_90: -2512837079427229253
+      crate_91: 7993144117625063824
+      crate_92: -9117032532226335549
+      crate_93: 399308141030076772
+      crate_94: -672017022460028107
+      crate_95: -7800973473186706361
+      crate_96: 3783786146653065845
+      crate_97: 8669619434105043741
+      crate_98: -1073252500390842040
+      crate_99: -4793631693487358257
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
