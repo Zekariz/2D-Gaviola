@@ -6,8 +6,6 @@ namespace YourGame.Gameplay.Player
     /// Reads state from PlayerController every frame and pushes it into
     /// the Animator. Also listens for the OnJumped event to fire the
     /// jumpTrigger without a one-frame polling gap.
-    /// This component must live on the SAME GameObject as PlayerController
-    /// and Animator.
     /// </summary>
     [RequireComponent(typeof(PlayerController))]
     [RequireComponent(typeof(Animator))]
@@ -16,16 +14,16 @@ namespace YourGame.Gameplay.Player
         private PlayerController _controller;
         private Animator         _animator;
 
-        // Pre-hash all parameter names once at load time.
-        // If a hash doesn't match a parameter name in Player.controller,
-        // Unity will silently ignore the Set* call — check the Animator
-        // window if transitions never fire.
         private static readonly int SpeedHash        = Animator.StringToHash("speed");
         private static readonly int IsGroundedHash   = Animator.StringToHash("isGrounded");
         private static readonly int VelocityYHash    = Animator.StringToHash("velocityY");
         private static readonly int IsRunningHash    = Animator.StringToHash("isRunning");
         private static readonly int FacingLeftHash   = Animator.StringToHash("facingLeft");
         private static readonly int JumpTriggerHash  = Animator.StringToHash("jumpTrigger");
+
+        private float _reportedSpeed;
+        private float _lowSpeedTimer;
+        private const float LOW_SPEED_TOLERANCE = 0.05f; // Tolerance for 1-frame physics snags
 
         private void Awake()
         {
@@ -35,7 +33,6 @@ namespace YourGame.Gameplay.Player
 
         private void OnEnable()
         {
-            // Subscribe when enabled so the trigger fires on the exact frame the jump executes
             _controller.OnJumped += HandleJump;
         }
 
@@ -46,10 +43,22 @@ namespace YourGame.Gameplay.Player
 
         private void Update()
         {
-            // Push all continuous parameters every frame.
-            // HorizontalSpeed is always >= 0 (unsigned); the facingLeft bool
-            // handles which directional clip plays — we never touch flipX.
-            _animator.SetFloat(SpeedHash,       _controller.HorizontalSpeed);
+            float actualSpeed = _controller.HorizontalSpeed;
+            
+            // Debounce the speed parameter dropping to 0 to prevent 1-frame animation flickers (Bug 1 & 3 fix)
+            if (actualSpeed < 0.1f)
+            {
+                _lowSpeedTimer += Time.deltaTime;
+                if (_lowSpeedTimer > LOW_SPEED_TOLERANCE)
+                    _reportedSpeed = actualSpeed;
+            }
+            else
+            {
+                _lowSpeedTimer = 0f;
+                _reportedSpeed = actualSpeed;
+            }
+
+            _animator.SetFloat(SpeedHash,       _reportedSpeed);
             _animator.SetBool (IsGroundedHash,  _controller.IsGrounded);
             _animator.SetFloat(VelocityYHash,   _controller.VelocityY);
             _animator.SetBool (IsRunningHash,   _controller.IsRunning);
@@ -58,8 +67,6 @@ namespace YourGame.Gameplay.Player
 
         private void HandleJump()
         {
-            // SetTrigger is consumed in the next Animator evaluation cycle,
-            // which is guaranteed to be within 1 frame of the jump.
             _animator.SetTrigger(JumpTriggerHash);
         }
     }
