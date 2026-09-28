@@ -33,7 +33,7 @@ namespace YourGame.Gameplay.Core
         private void Start()
         {
             // Find player if not assigned
-            _player = FindObjectOfType<PlayerController>();
+            _player = FindAnyObjectByType<PlayerController>();
             _startTime = Time.time;
             
             if (_spawnPoint != null)

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using YourGame.Gameplay.Level;
 
 namespace YourGame.Gameplay.Player
 {
@@ -84,6 +85,7 @@ namespace YourGame.Gameplay.Player
         {
             ApplyHorizontalMovement();
             ApplyFallGravity();
+            ClampToBounds();
         }
 
         // ── Input Enable / Disable (used by VictoryScreen) ────────────────────
@@ -283,6 +285,35 @@ namespace YourGame.Gameplay.Player
             if (_groundCheck == null) return;
             Gizmos.color = Color.green;
             Gizmos.DrawWireSphere(_groundCheck.position, _groundCheckRadius);
+        }
+
+        // ── Map Boundary Clamping ──────────────────────────────────────────────
+        // Called from FixedUpdate so it runs in the physics step — using _rb.position
+        // ensures the physics engine respects the clamp on the same frame.
+        private void ClampToBounds()
+        {
+            if (LevelBoundsManager.Instance == null || !LevelBoundsManager.Instance.HasBounds) return;
+
+            Bounds b = LevelBoundsManager.Instance.CurrentBounds;
+            Vector2 pos = _rb.position;
+
+            // 0.5 unit padding so the sprite doesn't hang half-way off the edge.
+            const float padding = 0.5f;
+
+            if (pos.x < b.min.x + padding)
+            {
+                pos.x = b.min.x + padding;
+                if (_rb.linearVelocity.x < 0f)
+                    _rb.linearVelocity = new Vector2(0f, _rb.linearVelocity.y);
+            }
+            else if (pos.x > b.max.x - padding)
+            {
+                pos.x = b.max.x - padding;
+                if (_rb.linearVelocity.x > 0f)
+                    _rb.linearVelocity = new Vector2(0f, _rb.linearVelocity.y);
+            }
+
+            _rb.position = pos;
         }
     }
 }

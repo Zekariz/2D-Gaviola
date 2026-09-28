@@ -34,7 +34,7 @@ namespace YourGame.Gameplay.Victory
         {
             // Locate the looping audio source that is playing (background music)
             AudioSource music = null;
-            foreach (var src in FindObjectsByType<AudioSource>(FindObjectsSortMode.None))
+            foreach (var src in FindObjectsByType<AudioSource>(FindObjectsInactive.Exclude))
             {
                 if (src.loop && src.isPlaying)
                 {
