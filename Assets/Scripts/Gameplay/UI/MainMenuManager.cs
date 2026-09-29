@@ -223,22 +223,14 @@ namespace YourGame.Gameplay.UI
             var vg = layoutGO.AddComponent<VerticalLayoutGroup>();
             vg.childAlignment      = TextAnchor.MiddleCenter;
             vg.spacing             = 18f;
-            vg.childControlWidth   = false;  // Do NOT resize the buttons to fit the panel
-            vg.childControlHeight  = false;
+            vg.childControlWidth   = false; 
+            vg.childControlHeight  = true;  // Let the layout group determine button height
             vg.childForceExpandWidth  = false;
-            vg.childForceExpandHeight = false;
+            vg.childForceExpandHeight = true; // Stretch to fill the vertical space equally
 
             // The 5 buttons — using C# AddListener (never breaks at runtime)
             MakeButton("ResumeButton",   _resumeSprite,   layoutGO.transform, ResumeGame);
-            
-            GameObject rfpBtn = MakeButton("RFPButton", _rfpSprite, layoutGO.transform, RestartFromCheckpointGame);
-            if (rfpBtn.GetComponent<Image>().sprite != null)
-            {
-                RectTransform rfpRt = rfpBtn.GetComponent<RectTransform>();
-                float ratio = rfpRt.sizeDelta.x / rfpRt.sizeDelta.y;
-                rfpRt.sizeDelta = new Vector2(70f * ratio, 70f); // Fixed height of 70, maintain aspect ratio
-            }
-
+            MakeButton("RFPButton",      _rfpSprite,      layoutGO.transform, RestartFromCheckpointGame);
             MakeButton("RestartButton",  _restartSprite,  layoutGO.transform, RestartGame);
             MakeButton("SettingsButton", _settingsSprite, layoutGO.transform, SettingsGame);
             MakeButton("ExitButton",     _exitSprite,     layoutGO.transform, QuitGame);
@@ -275,6 +267,14 @@ namespace YourGame.Gameplay.UI
         private static GameObject MakeButton(string goName, Sprite sprite, Transform parent, UnityEngine.Events.UnityAction action)
         {
             var go  = MakeImage(goName, parent, sprite);
+            
+            if (sprite != null)
+            {
+                var arf = go.AddComponent<AspectRatioFitter>();
+                arf.aspectMode = AspectRatioFitter.AspectMode.HeightControlsWidth;
+                arf.aspectRatio = sprite.rect.width / sprite.rect.height;
+            }
+
             var btn = go.AddComponent<Button>();
             btn.onClick.AddListener(action);   // ← 100 % reliable runtime wiring
             return go;
