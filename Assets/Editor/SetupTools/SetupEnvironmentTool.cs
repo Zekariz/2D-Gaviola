@@ -15,7 +15,7 @@ namespace YourGame.Editor
         private const string BgPath = "Assets/Sprites/Environment/2d-background.jpg";
         private const string DirtPath = "Assets/Sprites/Environment/dirt.png";
 
-        [MenuItem("Tools/2D-Gaviola/Player/Setup Player HitBox")]
+        // [MenuItem("Tools/2D-Gaviola/Player/Setup Player HitBox")]
         public static void SetupPlayerHitBox()
         {
             var player = Object.FindAnyObjectByType<PlayerController>();
@@ -58,7 +58,7 @@ namespace YourGame.Editor
             Debug.Log("[SetupTool] Player HitBox child created. Feet are now excluded from hazard detection!");
         }
 
-        [MenuItem("Tools/2D-Gaviola/Environment/Create Solid Tiles")]
+        // [MenuItem("Tools/2D-Gaviola/Environment/Create Solid Tiles")]
         public static void CreateSolidTiles()
         {
             string outFolder = "Assets/Prefabs/Environment/Solid";
@@ -98,7 +98,7 @@ namespace YourGame.Editor
             Debug.Log($"[EnvironmentSetup] Created/Updated {created} Solid Tile prefabs in {outFolder}");
         }
 
-        [MenuItem("Tools/2D-Gaviola/Environment/Create Hazard Tiles")]
+        // [MenuItem("Tools/2D-Gaviola/Environment/Create Hazard Tiles")]
         public static void CreateHazardTiles()
         {
             string outFolder = "Assets/Prefabs/Environment/Hazards";
@@ -121,7 +121,7 @@ namespace YourGame.Editor
             }
             Debug.Log($"[EnvironmentSetup] Created/Updated {created} Hazard Tile prefabs in {outFolder}");
         }
-        [MenuItem("Tools/2D-Gaviola/Environment/Create Movable Crates")]
+        // [MenuItem("Tools/2D-Gaviola/Environment/Create Movable Crates")]
         public static void CreateMovableCrates()
         {
             string outFolder = "Assets/Prefabs/Environment/Movables";
@@ -178,7 +178,7 @@ namespace YourGame.Editor
             Debug.Log($"[EnvironmentSetup] Created {created} Movable Crate prefabs in {outFolder}");
         }
 
-        [MenuItem("Tools/2D-Gaviola/Environment/Create Finish Flag & UI")]
+        // [MenuItem("Tools/2D-Gaviola/Environment/Create Finish Flag & UI")]
         public static void CreateFinishFlagAndUI()
         {
             string outFolder = "Assets/Prefabs/Environment";
@@ -263,7 +263,7 @@ namespace YourGame.Editor
             Debug.Log("[EnvironmentSetup] Created LevelCompleteCanvas prefab. Drag BOTH into your scene!");
         }
 
-        [MenuItem("Tools/2D-Gaviola/Environment/Setup Fixed Background")]
+        // [MenuItem("Tools/2D-Gaviola/Environment/Setup Fixed Background")]
         public static void SetupFixedBackground()
         {
             var sprites = LoadSprites(BgPath);
@@ -312,7 +312,7 @@ namespace YourGame.Editor
             Debug.Log($"[EnvironmentSetup] Setup {objName} attached to Main Camera using sorting layer '{sr.sortingLayerName}'.");
         }
 
-        [MenuItem("Tools/2D-Gaviola/Environment/Create Moving Platforms")]
+        // [MenuItem("Tools/2D-Gaviola/Environment/Create Moving Platforms")]
         public static void CreateMovingPlatforms()
         {
             string outFolder = "Assets/Prefabs/Environment/Moving";
@@ -340,7 +340,7 @@ namespace YourGame.Editor
             Debug.Log($"[EnvironmentSetup] Created Moving Platforms in {outFolder}");
         }
 
-        [MenuItem("Tools/2D-Gaviola/Environment/Create Checkpoint Prefab")]
+        // [MenuItem("Tools/2D-Gaviola/Environment/Create Checkpoint Prefab")]
         public static void CreateCheckpointPrefab()
         {
             string outFolder = "Assets/Prefabs/Environment/Interactables";
@@ -372,7 +372,7 @@ namespace YourGame.Editor
             Debug.Log($"[EnvironmentSetup] Created Checkpoint prefab at {path}");
         }
 
-        [MenuItem("Tools/2D-Gaviola/Environment/Create Invisible Wall")]
+        // [MenuItem("Tools/2D-Gaviola/Environment/Create Invisible Wall")]
         public static void CreateInvisibleWall()
         {
             string outFolder = "Assets/Prefabs/Environment/Solid";

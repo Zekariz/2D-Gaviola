@@ -20,7 +20,7 @@ namespace YourGame.Editor
 
         private const string TargetSliceName        = "accomplished_58";
 
-        [MenuItem("Tools/2D-Gaviola/Setup/Create Victory Screen")]
+        // [MenuItem("Tools/2D-Gaviola/Setup/Create Victory Screen")]
         public static void CreateVictoryScreen()
         {
             // ── 1. Find accomplished_58 sprite ───────────────────────────────

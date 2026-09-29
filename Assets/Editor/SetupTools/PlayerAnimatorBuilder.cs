@@ -33,7 +33,7 @@ namespace YourGame.Editor
         private const int FallFrameIndex = 43;
 
         // ── Entry Point ───────────────────────────────────────────────────────
-        [MenuItem("Tools/2D-Gaviola/Animations/Build All Player Animations and Controller")]
+        // [MenuItem("Tools/2D-Gaviola/Animations/Build All Player Animations and Controller")]
         public static void Build()
         {
             // 1. Load + numerically sort sprites

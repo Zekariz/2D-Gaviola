@@ -18,7 +18,7 @@ namespace YourGame.Editor
     {
         private const string OutputPath = "Assets/Physics/PlayerNoFriction.physicsMaterial2D";
 
-        [MenuItem("Tools/2D-Gaviola/Setup/Create Player Physics Material")]
+        // [MenuItem("Tools/2D-Gaviola/Setup/Create Player Physics Material")]
         public static void Create()
         {
             // Skip if asset already exists.

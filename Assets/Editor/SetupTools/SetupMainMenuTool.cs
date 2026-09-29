@@ -10,7 +10,7 @@ using YourGame.Gameplay.UI;
 /// </summary>
 public class SetupMainMenuTool : Editor
 {
-    [MenuItem("Tools/Setup Main Menu (Clean)")]
+        // [MenuItem("Tools/Setup Main Menu (Clean)")]
     public static void SetupMainMenu()
     {
         // ── 1. Nuke every old element from previous setups ────────────────────

@@ -4,7 +4,7 @@ using YourGame.Gameplay.Player;
 
 public class SetupPlayerTool
 {
-    [MenuItem("Tools/Auto-Setup Player")]
+        // [MenuItem("Tools/Auto-Setup Player")]
     public static void CreatePlayer()
     {
         if (GameObject.Find("Player") != null)

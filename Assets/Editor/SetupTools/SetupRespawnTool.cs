@@ -6,7 +6,7 @@ namespace YourGame.Editor
 {
     public class SetupRespawnTool
     {
-        [MenuItem("Tools/2D-Gaviola/Setup/3. Setup Respawn and Camera")]
+        // [MenuItem("Tools/2D-Gaviola/Setup/3. Setup Respawn and Camera")]
         public static void Setup()
         {
             // 1. Camera Follow
