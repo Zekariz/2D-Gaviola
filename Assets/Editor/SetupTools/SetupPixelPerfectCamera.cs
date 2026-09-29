@@ -49,10 +49,12 @@ namespace YourGame.Editor
             ppc.assetsPPU           = AssetsPixelsPerUnit;
             ppc.refResolutionX      = ReferenceResolutionX;
             ppc.refResolutionY      = ReferenceResolutionY;
+#pragma warning disable 0618 // Disable obsolete warnings for PPC properties
             ppc.upscaleRT           = true;   // renders at reference res, then scales up — prevents blur
             ppc.pixelSnapping       = true;   // snaps all sprite positions to pixel boundaries
             ppc.cropFrameX          = false;  // set to true to pillarbox if 16:9 doesn''t match
             ppc.cropFrameY          = false;  // set to true to letterbox
+#pragma warning restore 0618
 
             EditorUtility.SetDirty(mainCam.gameObject);
 

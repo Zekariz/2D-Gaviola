@@ -49,7 +49,9 @@ namespace YourGame.Editor
             {
                 TilemapCollider2D tc = layerGo.GetComponent<TilemapCollider2D>();
                 if (tc == null) tc = layerGo.AddComponent<TilemapCollider2D>();
+#pragma warning disable 0618
                 tc.usedByComposite = true;
+#pragma warning restore 0618
 
                 CompositeCollider2D cc = layerGo.GetComponent<CompositeCollider2D>();
                 if (cc == null) cc = layerGo.AddComponent<CompositeCollider2D>();

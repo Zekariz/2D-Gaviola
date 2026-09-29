@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
@@ -137,7 +137,9 @@ namespace YourGame.Editor
                         };
                     }
 
+#pragma warning disable 0618
                     importer.spritesheet = spritesheet;
+#pragma warning restore 0618
 
                     EditorUtility.SetDirty(importer);
                     importer.SaveAndReimport();

@@ -24,7 +24,7 @@ public class SetupMainMenuTool : Editor
 
         // Remove stale GameObjects
         var allGOs = Object.FindObjectsByType<GameObject>(
-            FindObjectsInactive.Include, FindObjectsSortMode.None);
+            FindObjectsInactive.Include);
         foreach (var go in allGOs)
         {
             foreach (var staleName in staleNames)
@@ -40,7 +40,7 @@ public class SetupMainMenuTool : Editor
 
         // Remove stale MainMenuManager components (could be orphaned on other objects)
         var staleManagers = Object.FindObjectsByType<MainMenuManager>(
-            FindObjectsInactive.Include, FindObjectsSortMode.None);
+            FindObjectsInactive.Include);
         foreach (var m in staleManagers)
         {
             Debug.Log($"[SetupMainMenu] Removing stale MainMenuManager from {m.gameObject.name}");

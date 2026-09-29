@@ -18,7 +18,7 @@ namespace YourGame.Editor
         [MenuItem("Tools/2D-Gaviola/Player/Setup Player HitBox")]
         public static void SetupPlayerHitBox()
         {
-            var player = Object.FindObjectOfType<PlayerController>();
+            var player = Object.FindAnyObjectByType<PlayerController>();
             if (player == null)
             {
                 Debug.LogError("[SetupTool] No PlayerController found in the scene! Make sure the Player is in the scene.");
