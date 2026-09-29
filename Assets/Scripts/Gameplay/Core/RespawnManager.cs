@@ -47,13 +47,31 @@ namespace YourGame.Gameplay.Core
 
         public void Respawn()
         {
-            if (_player != null)
+            if (_player != null && !_player.IsDead)
             {
-                Debug.Log("[RespawnManager] Player died. Respawning...");
-                _player.TeleportTo(_currentRespawnPosition);
-                
+                Debug.Log("[RespawnManager] Player died. Playing death animation...");
+                _player.IsDead = true;
                 PlayDeathSound();
+
+                var deathAnim = _player.GetComponent<DeathAnimationController>();
+                if (deathAnim != null)
+                {
+                    StartCoroutine(deathAnim.PlayAndRespawn(_currentRespawnPosition, _player));
+                }
+                else
+                {
+                    // Fallback if script isn't attached: instant respawn after 2s.
+                    Debug.LogWarning("[RespawnManager] DeathAnimationController not found on Player!");
+                    StartCoroutine(FallbackRespawn());
+                }
             }
+        }
+
+        private IEnumerator FallbackRespawn()
+        {
+            yield return new WaitForSeconds(2.0f);
+            _player.TeleportTo(_currentRespawnPosition);
+            _player.IsDead = false;
         }
 
         private void PlayDeathSound()

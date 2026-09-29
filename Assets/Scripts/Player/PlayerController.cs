@@ -54,6 +54,7 @@ namespace YourGame.Gameplay.Player
         public bool  IsGrounded    { get; private set; }
         public bool  IsRunning     { get; private set; }
         public bool  FacingLeft    { get; private set; }
+        public bool  IsDead        { get; set; }
         public float HorizontalSpeed => Mathf.Abs(_rb.linearVelocity.x - _surfaceVelocity.x);   // always >= 0
         public float VelocityY       => _rb.linearVelocity.y;
 
@@ -76,6 +77,7 @@ namespace YourGame.Gameplay.Player
         // Input polling always in Update — GetKeyDown is silently lost in FixedUpdate.
         private void Update()
         {
+            if (IsDead) return;
             GatherInput();
             UpdateGroundAndTimers();
             HandleJump();
@@ -83,6 +85,11 @@ namespace YourGame.Gameplay.Player
 
         private void FixedUpdate()
         {
+            if (IsDead) 
+            {
+                _rb.linearVelocity = Vector2.zero;
+                return;
+            }
             ApplyHorizontalMovement();
             ApplyFallGravity();
             ClampToBounds();

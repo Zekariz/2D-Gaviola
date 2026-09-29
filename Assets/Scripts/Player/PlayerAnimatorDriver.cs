@@ -20,6 +20,7 @@ namespace YourGame.Gameplay.Player
         private static readonly int IsRunningHash    = Animator.StringToHash("isRunning");
         private static readonly int FacingLeftHash   = Animator.StringToHash("facingLeft");
         private static readonly int JumpTriggerHash  = Animator.StringToHash("jumpTrigger");
+        private static readonly int IsDeadHash       = Animator.StringToHash("isDead");
 
         private float _reportedSpeed;
         private float _lowSpeedTimer;
@@ -62,7 +63,12 @@ namespace YourGame.Gameplay.Player
             _animator.SetBool (IsGroundedHash,  _controller.IsGrounded);
             _animator.SetFloat(VelocityYHash,   _controller.VelocityY);
             _animator.SetBool (IsRunningHash,   _controller.IsRunning);
-            _animator.SetBool (FacingLeftHash,  _controller.FacingLeft);
+            
+            // ALWAYS tell the animator we are facing right, so it only plays the right-side animations (walk-r.png)
+            _animator.SetBool(FacingLeftHash, false); 
+            GetComponentInChildren<SpriteRenderer>().flipX = _controller.FacingLeft;
+            
+            _animator.SetBool (IsDeadHash,      _controller.IsDead);
         }
 
         private void HandleJump()
