@@ -32,7 +32,7 @@ namespace YourGame.Gameplay.UI
 
         [Header("UI Scaling")]
         [Tooltip("Width and Height of the background panel (main-menu_0). Adjust this to scale the menu!")]
-        [SerializeField] private Vector2 _panelSize = new Vector2(480f, 600f); // Taller for extra button
+        [SerializeField] private Vector2 _panelSize = new Vector2(1152f, 648f); // 60% of 1920x1080 (16:9)
 
         // ── Runtime UI refs (built in Awake) ─────────────────────────────────────
         private Image          _overlay;
@@ -222,11 +222,11 @@ namespace YourGame.Gameplay.UI
             layoutRect.offsetMax   = new Vector2(-50f, -40f);
             var vg = layoutGO.AddComponent<VerticalLayoutGroup>();
             vg.childAlignment      = TextAnchor.MiddleCenter;
-            vg.spacing             = 18f;
+            vg.spacing             = 20f;
             vg.childControlWidth   = false; 
-            vg.childControlHeight  = true;  // Let the layout group determine button height
+            vg.childControlHeight  = false; // We set the height explicitly on the buttons
             vg.childForceExpandWidth  = false;
-            vg.childForceExpandHeight = true; // Stretch to fill the vertical space equally
+            vg.childForceExpandHeight = false;
 
             // The 5 buttons — using C# AddListener (never breaks at runtime)
             MakeButton("ResumeButton",   _resumeSprite,   layoutGO.transform, ResumeGame);
@@ -270,9 +270,10 @@ namespace YourGame.Gameplay.UI
             
             if (sprite != null)
             {
-                var arf = go.AddComponent<AspectRatioFitter>();
-                arf.aspectMode = AspectRatioFitter.AspectMode.HeightControlsWidth;
-                arf.aspectRatio = sprite.rect.width / sprite.rect.height;
+                RectTransform rt = go.GetComponent<RectTransform>();
+                float ratio = sprite.rect.width / sprite.rect.height;
+                float targetHeight = 80f; // Fixed height for all buttons
+                rt.sizeDelta = new Vector2(targetHeight * ratio, targetHeight);
             }
 
             var btn = go.AddComponent<Button>();
