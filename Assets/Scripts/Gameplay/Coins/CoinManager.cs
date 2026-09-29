@@ -26,8 +26,11 @@ namespace YourGame.Gameplay.Coins
         public AudioClip coinSound;
 
         [Header("Sound")]
-        [Tooltip("Max number of seconds the coin SFX is allowed to play.")]
-        public float maxSoundDuration = 0.80f;
+        [Tooltip("Time in seconds to start playing the coin SFX (e.g. skip silence).")]
+        public float soundStartTime = 0.15f;
+        
+        [Tooltip("Time in seconds to stop playing the coin SFX.")]
+        public float soundEndTime = 0.80f;
 
         [Header("State (read-only)")]
         public int currentCoins = 0;
@@ -73,10 +76,17 @@ namespace YourGame.Gameplay.Coins
 
             _audioSource.Stop();
             _audioSource.clip = coinSound;
+            
+            // Skip the first 0.15s of silence
+            _audioSource.time = soundStartTime; 
             _audioSource.Play();
 
-            // Schedule a stop after maxSoundDuration seconds
-            _stopSoundCoroutine = StartCoroutine(StopAfterDelay(maxSoundDuration));
+            // Schedule a stop so it cuts off exactly at soundEndTime
+            float playDuration = soundEndTime - soundStartTime;
+            if (playDuration > 0)
+            {
+                _stopSoundCoroutine = StartCoroutine(StopAfterDelay(playDuration));
+            }
         }
 
         private IEnumerator StopAfterDelay(float delay)
