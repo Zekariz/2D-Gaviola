@@ -73,13 +73,25 @@ public class SetupMainMenuTool : Editor
         {
             var so = new SerializedObject(manager);
             AssignSprite(so, "_bgSprite",        allAssets, "main-menu_0");
-            AssignSprite(so, "_hamburgerSprite",  allAssets, "main-menu_1");
-            AssignSprite(so, "_resumeSprite",     allAssets, "main-menu_2");
-            AssignSprite(so, "_restartSprite",    allAssets, "main-menu_3");
-            AssignSprite(so, "_settingsSprite",   allAssets, "main-menu_4");
-            AssignSprite(so, "_exitSprite",       allAssets, "main-menu_5");
+            AssignSprite(so, "_hamburgerSprite", allAssets, "main-menu_1");
+            AssignSprite(so, "_resumeSprite",    allAssets, "main-menu_2");
+            AssignSprite(so, "_restartSprite",   allAssets, "main-menu_3");
+            AssignSprite(so, "_settingsSprite",  allAssets, "main-menu_4");
+            AssignSprite(so, "_exitSprite",      allAssets, "main-menu_5");
+            
+            // Assign RFP Sprite from its own file
+            Sprite rfpSprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprites/Menu/rfp.png");
+            if (rfpSprite != null)
+            {
+                so.FindProperty("_rfpSprite").objectReferenceValue = rfpSprite;
+            }
+            else
+            {
+                Debug.LogWarning("[SetupMainMenu] rfp.png not found at Assets/Sprites/Menu/rfp.png");
+            }
+            
             so.ApplyModifiedProperties();
-            Debug.Log("[SetupMainMenu] All 6 sprites assigned.");
+            Debug.Log("[SetupMainMenu] All sprites assigned.");
         }
 
         // ── 5. Save scene ─────────────────────────────────────────────────────

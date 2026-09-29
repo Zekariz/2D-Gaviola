@@ -21,6 +21,7 @@ namespace YourGame.Gameplay.UI
         [SerializeField] private Sprite _bgSprite;            // main-menu_0  (background panel)
         [SerializeField] private Sprite _hamburgerSprite;     // main-menu_1  (open button)
         [SerializeField] private Sprite _resumeSprite;        // main-menu_2
+        [SerializeField] private Sprite _rfpSprite;           // Restart From Checkpoint button
         [SerializeField] private Sprite _restartSprite;       // main-menu_3
         [SerializeField] private Sprite _settingsSprite;      // main-menu_4
         [SerializeField] private Sprite _exitSprite;          // main-menu_5
@@ -31,7 +32,7 @@ namespace YourGame.Gameplay.UI
 
         [Header("UI Scaling")]
         [Tooltip("Width and Height of the background panel (main-menu_0). Adjust this to scale the menu!")]
-        [SerializeField] private Vector2 _panelSize = new Vector2(480f, 520f);
+        [SerializeField] private Vector2 _panelSize = new Vector2(480f, 600f); // Taller for extra button
 
         // ── Runtime UI refs (built in Awake) ─────────────────────────────────────
         private Image          _overlay;
@@ -227,11 +228,26 @@ namespace YourGame.Gameplay.UI
             vg.childForceExpandWidth  = false;
             vg.childForceExpandHeight = false;
 
-            // The 4 buttons — using C# AddListener (never breaks at runtime)
+            // The 5 buttons — using C# AddListener (never breaks at runtime)
             MakeButton("ResumeButton",   _resumeSprite,   layoutGO.transform, ResumeGame);
+            MakeButton("RFPButton",      _rfpSprite,      layoutGO.transform, RestartFromCheckpointGame);
             MakeButton("RestartButton",  _restartSprite,  layoutGO.transform, RestartGame);
             MakeButton("SettingsButton", _settingsSprite, layoutGO.transform, SettingsGame);
             MakeButton("ExitButton",     _exitSprite,     layoutGO.transform, QuitGame);
+        }
+
+        public void RestartFromCheckpointGame()
+        {
+            Debug.Log("[MainMenuManager] Restarting from Checkpoint");
+            Time.timeScale = 1f;
+
+            if (YourGame.Gameplay.Core.RespawnManager.Instance != null)
+            {
+                YourGame.Gameplay.Core.RespawnManager.Instance.ForceRespawn();
+            }
+
+            _isOpen = false;
+            StartCoroutine(AnimateMenu(opening: false));
         }
 
         // ── UI helpers ───────────────────────────────────────────────────────────

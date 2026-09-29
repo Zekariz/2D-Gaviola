@@ -67,6 +67,19 @@ namespace YourGame.Gameplay.Core
             }
         }
 
+        public void ForceRespawn()
+        {
+            if (_player != null)
+            {
+                if (_player.TryGetComponent<Rigidbody2D>(out var rb))
+                {
+                    rb.linearVelocity = Vector2.zero;
+                }
+                _player.TeleportTo(_currentRespawnPosition);
+                _player.IsDead = false;
+            }
+        }
+
         private IEnumerator FallbackRespawn()
         {
             yield return new WaitForSeconds(2.0f);
