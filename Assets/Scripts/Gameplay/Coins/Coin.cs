@@ -13,7 +13,8 @@ namespace YourGame.Gameplay.Coins
     {
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.CompareTag("Player"))
+            // Check if the object touching us has a PlayerController (or is a child HitBox of the player)
+            if (collision.GetComponentInParent<YourGame.Gameplay.Player.PlayerController>() != null)
             {
                 CoinManager.Instance?.AddCoin();
                 gameObject.SetActive(false);
