@@ -32,7 +32,7 @@ namespace YourGame.Gameplay.UI
 
         [Header("UI Scaling")]
         [Tooltip("Width and Height of the background panel (main-menu_0). Adjust this to scale the menu!")]
-        [SerializeField] private Vector2 _panelSize = new Vector2(650f, 500f);
+        [SerializeField] private Vector2 _panelSize = new Vector2(560f, 600f);
 
         // ── Runtime UI refs (built in Awake) ─────────────────────────────────────
         private Image          _overlay;
@@ -218,13 +218,13 @@ namespace YourGame.Gameplay.UI
             var layoutRect = layoutGO.AddComponent<RectTransform>();
             layoutRect.anchorMin   = Vector2.zero;
             layoutRect.anchorMax   = Vector2.one;
-            layoutRect.offsetMin   = new Vector2(70f, 40f);
-            layoutRect.offsetMax   = new Vector2(-70f, -120f); // Top offset to make room for MAIN-MENU banner
+            layoutRect.offsetMin   = new Vector2(50f, 40f);
+            layoutRect.offsetMax   = new Vector2(-50f, -140f); // Top offset to make room for MAIN-MENU banner
             var vg = layoutGO.AddComponent<VerticalLayoutGroup>();
             vg.childAlignment      = TextAnchor.UpperCenter;
-            vg.spacing             = 10f;
-            vg.childControlWidth   = true; 
-            vg.childControlHeight  = true; 
+            vg.spacing             = 15f;
+            vg.childControlWidth   = false; // We set the size explicitly on the button itself!
+            vg.childControlHeight  = false; 
             vg.childForceExpandWidth  = false;
             vg.childForceExpandHeight = false;
 
@@ -268,12 +268,14 @@ namespace YourGame.Gameplay.UI
         {
             var go  = MakeImage(goName, parent, sprite);
             
-            if (sprite != null)
-            {
-                var le = go.AddComponent<LayoutElement>();
-                le.preferredWidth = 510f; // Exactly spans the width of the layout (650 - 70 - 70)
-                le.preferredHeight = 60f; // Leaves exactly enough room for 5 buttons and spacing (300 + 40 = 340 height used)
-            }
+            // We explicitly force the RectTransform parameters.
+            // VerticalLayoutGroup (with childControlWidth = false) will simply place the RectTransform,
+            // so we guarantee it stays centered by forcing its pivot to 0.5.
+            RectTransform rt = go.GetComponent<RectTransform>();
+            rt.pivot = new Vector2(0.5f, 0.5f);
+            rt.anchorMin = new Vector2(0.5f, 0.5f);
+            rt.anchorMax = new Vector2(0.5f, 0.5f);
+            rt.sizeDelta = new Vector2(300f, 80f); // Exactly 120x32 scaled up
 
             var btn = go.AddComponent<Button>();
             btn.onClick.AddListener(action);   // ← 100 % reliable runtime wiring
