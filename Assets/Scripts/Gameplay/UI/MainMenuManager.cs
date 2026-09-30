@@ -32,7 +32,7 @@ namespace YourGame.Gameplay.UI
 
         [Header("UI Scaling")]
         [Tooltip("Width and Height of the background panel (main-menu_0). Adjust this to scale the menu!")]
-        [SerializeField] private Vector2 _panelSize = new Vector2(560f, 600f);
+        [SerializeField] private Vector2 _panelSize = new Vector2(650f, 500f);
 
         // ── Runtime UI refs (built in Awake) ─────────────────────────────────────
         private Image          _overlay;
@@ -218,11 +218,11 @@ namespace YourGame.Gameplay.UI
             var layoutRect = layoutGO.AddComponent<RectTransform>();
             layoutRect.anchorMin   = Vector2.zero;
             layoutRect.anchorMax   = Vector2.one;
-            layoutRect.offsetMin   = new Vector2(50f, 50f);
-            layoutRect.offsetMax   = new Vector2(-50f, -140f); // Top offset of 140 to make room for MAIN-MENU banner
+            layoutRect.offsetMin   = new Vector2(70f, 40f);
+            layoutRect.offsetMax   = new Vector2(-70f, -120f); // Top offset to make room for MAIN-MENU banner
             var vg = layoutGO.AddComponent<VerticalLayoutGroup>();
             vg.childAlignment      = TextAnchor.UpperCenter;
-            vg.spacing             = 15f;
+            vg.spacing             = 10f;
             vg.childControlWidth   = true; 
             vg.childControlHeight  = true; 
             vg.childForceExpandWidth  = false;
@@ -271,8 +271,8 @@ namespace YourGame.Gameplay.UI
             if (sprite != null)
             {
                 var le = go.AddComponent<LayoutElement>();
-                le.preferredWidth = 300f; // Exactly ~120px scaled up to fit the 560px width panel
-                le.preferredHeight = 80f; // Exactly ~32px scaled up
+                le.preferredWidth = 510f; // Exactly spans the width of the layout (650 - 70 - 70)
+                le.preferredHeight = 60f; // Leaves exactly enough room for 5 buttons and spacing (300 + 40 = 340 height used)
             }
 
             var btn = go.AddComponent<Button>();
