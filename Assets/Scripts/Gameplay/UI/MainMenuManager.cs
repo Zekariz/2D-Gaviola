@@ -32,7 +32,7 @@ namespace YourGame.Gameplay.UI
 
         [Header("UI Scaling")]
         [Tooltip("Width and Height of the background panel (main-menu_0). Adjust this to scale the menu!")]
-        [SerializeField] private Vector2 _panelSize = new Vector2(550f, 650f);
+        [SerializeField] private Vector2 _panelSize = new Vector2(560f, 600f);
 
         // ── Runtime UI refs (built in Awake) ─────────────────────────────────────
         private Image          _overlay;
@@ -224,8 +224,8 @@ namespace YourGame.Gameplay.UI
             vg.childAlignment      = TextAnchor.UpperCenter;
             vg.spacing             = 15f;
             vg.childControlWidth   = true; 
-            vg.childControlHeight  = false; 
-            vg.childForceExpandWidth  = true;
+            vg.childControlHeight  = true; 
+            vg.childForceExpandWidth  = false;
             vg.childForceExpandHeight = false;
 
             // The 5 buttons — using C# AddListener (never breaks at runtime)
@@ -271,7 +271,8 @@ namespace YourGame.Gameplay.UI
             if (sprite != null)
             {
                 var le = go.AddComponent<LayoutElement>();
-                le.preferredHeight = 75f;
+                le.preferredWidth = 300f; // Exactly ~120px scaled up to fit the 560px width panel
+                le.preferredHeight = 80f; // Exactly ~32px scaled up
             }
 
             var btn = go.AddComponent<Button>();
