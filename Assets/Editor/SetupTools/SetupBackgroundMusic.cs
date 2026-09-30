@@ -6,7 +6,7 @@ public class SetupBackgroundMusic
 {
     private const string ClipPath = "Assets/Audio/Music/LittlerootTown.mp3";
 
-        // [MenuItem("Tools/2D-Gaviola/Setup Background Music")]
+        [MenuItem("Tools/2D-Gaviola/Setup Background Music")]
     public static void Setup()
     {
         // Find or create the GameManager GameObject

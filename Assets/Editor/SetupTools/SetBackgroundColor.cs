@@ -3,7 +3,7 @@ using UnityEditor;
 
 public class SetBackgroundColor
 {
-        // [MenuItem("Tools/Set Pink Background")]
+        [MenuItem("Tools/Set Pink Background")]
     public static void SetColor()
     {
         if (Camera.main != null)

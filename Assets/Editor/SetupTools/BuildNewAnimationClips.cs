@@ -55,7 +55,7 @@ namespace YourGame.Editor
 
         // ── Entry Point ───────────────────────────────────────────────────────
 
-        // [MenuItem("Tools/2D-Gaviola/Animation/Build New Animation Clips")]
+        [MenuItem("Tools/2D-Gaviola/Animation/Build New Animation Clips")]
         public static void Build()
         {
             // Ensure the output folder exists

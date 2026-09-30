@@ -28,7 +28,7 @@ namespace YourGame.Editor
         private const int   ReferenceResolutionX    = 320;
         private const int   ReferenceResolutionY    = 180;
 
-        // [MenuItem("Tools/2D-Gaviola/Setup/Add Pixel Perfect Camera")]
+        [MenuItem("Tools/2D-Gaviola/Setup/Add Pixel Perfect Camera")]
         public static void Setup()
         {
             Camera mainCam = Camera.main;

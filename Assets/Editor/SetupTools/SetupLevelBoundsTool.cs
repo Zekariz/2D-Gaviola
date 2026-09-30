@@ -18,7 +18,7 @@ namespace YourGame.Editor
     {
         private const string ManagerName = "LevelBoundsManager";
 
-        // [MenuItem("Tools/2D-Gaviola/Setup/Setup Static Level Bounds")]
+        [MenuItem("Tools/2D-Gaviola/Setup/Setup Static Level Bounds")]
         public static void Setup()
         {
             // 1. Create or Find Manager

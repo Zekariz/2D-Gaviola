@@ -37,7 +37,7 @@ namespace YourGame.Editor
             "Assets/Sprites/Characters/jump-r.png"
         };
 
-        // [MenuItem("Tools/2D-Gaviola/Animation/Fix Sprite Import Settings")]
+        [MenuItem("Tools/2D-Gaviola/Animation/Fix Sprite Import Settings")]
         public static void FixSettings()
         {
             // -- Step 1: Verify all files exist and importers are accessible ------

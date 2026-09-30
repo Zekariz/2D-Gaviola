@@ -20,7 +20,7 @@ namespace YourGame.Editor
 
         // NOTE: [MenuItem] left commented out per project convention.
         // Uncomment to expose in Unity menu if needed.
-        // [MenuItem("Tools/2D-Gaviola/Setup/5. Setup Coin System")]
+        [MenuItem("Tools/2D-Gaviola/Setup/5. Setup Coin System")]
         public static void RunSetup()
         {
             // ── 1. Load assets ──────────────────────────────────────────────────

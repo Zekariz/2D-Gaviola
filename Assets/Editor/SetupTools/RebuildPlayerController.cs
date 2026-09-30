@@ -42,7 +42,7 @@ namespace YourGame.Editor
 
         // ── Entry Point ───────────────────────────────────────────────────────
 
-        // [MenuItem("Tools/2D-Gaviola/Animation/Rebuild Player Controller")]
+        [MenuItem("Tools/2D-Gaviola/Animation/Rebuild Player Controller")]
         public static void Rebuild()
         {
             // ── 1. Load controller ────────────────────────────────────────────

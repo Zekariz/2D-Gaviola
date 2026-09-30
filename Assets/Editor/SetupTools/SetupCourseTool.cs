@@ -7,7 +7,7 @@ namespace YourGame.Editor
 {
     public class SetupCourseTool
     {
-        // [MenuItem("Tools/2D-Gaviola/Setup/4. Generate Obstacle Prefabs")]
+        [MenuItem("Tools/2D-Gaviola/Setup/4. Generate Obstacle Prefabs")]
         public static void GeneratePrefabs()
         {
             if (!AssetDatabase.IsValidFolder("Assets/Prefabs/Obstacles"))

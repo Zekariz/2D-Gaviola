@@ -6,7 +6,7 @@ using System.Linq;
 
 public class CreateIdleAnimationTool
 {
-        // [MenuItem("Tools/Create Idle Animation")]
+        [MenuItem("Tools/Create Idle Animation")]
     public static void CreateIdleAnimation()
     {
         string spriteSheetPath = "Assets/Sprites/Characters/SpriteSheet2D.png";

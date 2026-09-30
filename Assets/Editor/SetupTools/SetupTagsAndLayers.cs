@@ -5,7 +5,7 @@ namespace YourGame.Editor
 {
     public class SetupTagsAndLayers
     {
-        // [MenuItem("Tools/2D-Gaviola/Setup/1. Setup Tags and Layers")]
+        [MenuItem("Tools/2D-Gaviola/Setup/1. Setup Tags and Layers")]
         public static void Setup()
         {
             SerializedObject tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]);

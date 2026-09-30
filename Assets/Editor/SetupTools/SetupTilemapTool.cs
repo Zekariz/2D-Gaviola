@@ -6,7 +6,7 @@ namespace YourGame.Editor
 {
     public class SetupTilemapTool
     {
-        // [MenuItem("Tools/2D-Gaviola/Setup/2. Create Ground Tilemap")]
+        [MenuItem("Tools/2D-Gaviola/Setup/2. Create Ground Tilemap")]
         public static void CreateTilemap()
         {
             // Create Grid

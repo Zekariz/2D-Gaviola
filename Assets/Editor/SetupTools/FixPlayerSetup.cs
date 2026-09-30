@@ -15,7 +15,7 @@ public class FixPlayerSetup
 {
     private const string ControllerPath = "Assets/Animations/Player/Player.controller";
 
-        // [MenuItem("Tools/Fix Player Setup")]
+        [MenuItem("Tools/Fix Player Setup")]
     public static void Fix()
     {
         // ── 1. Find Player root ───────────────────────────────────────────────
