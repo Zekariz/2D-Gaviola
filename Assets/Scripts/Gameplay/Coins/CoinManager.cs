@@ -27,7 +27,7 @@ namespace YourGame.Gameplay.Coins
 
         [Header("Sound")]
         [Tooltip("Time in seconds to start playing the coin SFX (e.g. skip silence).")]
-        public float soundStartTime = 0.15f;
+        public float soundStartTime = 0.25f;
         
         [Tooltip("Time in seconds to stop playing the coin SFX.")]
         public float soundEndTime = 0.80f;
@@ -77,7 +77,7 @@ namespace YourGame.Gameplay.Coins
             _audioSource.Stop();
             _audioSource.clip = coinSound;
             
-            // Skip the first 0.15s of silence
+            // Skip the first 0.25s of silence
             _audioSource.time = soundStartTime; 
             _audioSource.Play();
 
