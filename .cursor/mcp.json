@@ -1,3 +1,69 @@
 {
-  "mcpServers": {}
+  "mcpServers": {
+    "unity-editor": {
+      "command": "npx",
+      "args": ["-y", "unity-mcp@latest"],
+      "env": {
+        "UNITY_PROJECT_PATH": "C:\\Users\\Ralph Simon Gaviola\\Downloads\\2D-Gaviola\\2D-Gaviola"
+      },
+      "disabled": true
+    },
+
+    "unity-files": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Users\\Ralph Simon Gaviola\\Downloads\\2D-Gaviola\\2D-Gaviola\\Assets",
+        "C:\\Users\\Ralph Simon Gaviola\\Downloads\\2D-Gaviola\\2D-Gaviola\\ProjectSettings"
+      ]
+    },
+
+    "unity-docs": {
+      "command": "python",
+      "args": ["C:\\unity-docs\\unity-docs-mcp\\server-lite.py"],
+      "env": {
+        "UNITY_DOCS_ROOT": "C:\\unity-docs\\corpus"
+      }
+    },
+
+    "git": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-git",
+        "--repository",
+        "C:\\Users\\Ralph Simon Gaviola\\Downloads\\2D-Gaviola\\2D-Gaviola"
+      ]
+    },
+
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"]
+    },
+
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    },
+
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp"],
+      "disabled": true
+    },
+
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "<your-token>"
+      },
+      "disabled": true
+    }
+  }
 }

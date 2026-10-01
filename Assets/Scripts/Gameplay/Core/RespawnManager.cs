@@ -45,6 +45,11 @@ namespace YourGame.Gameplay.Core
             _currentRespawnPosition = newPosition;
         }
 
+        public Vector3 GetSafeRespawnPosition()
+        {
+            return _currentRespawnPosition;
+        }
+
         public void Respawn()
         {
             if (_player != null && !_player.IsDead)
@@ -116,3 +121,7 @@ namespace YourGame.Gameplay.Core
         }
     }
 }
+
+
+ 
+

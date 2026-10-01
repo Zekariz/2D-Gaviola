@@ -1,0 +1,204 @@
+---
+description: MCP routing rules — which MCP server to use for which task. Always active.
+globs: ["**/*"]
+alwaysApply: true
+---
+
+# MCP Routing Rules
+
+The project has access to multiple MCP servers. Use the right one for the task. Do not call MCPs speculatively — only when the task actually needs external context.
+
+## Routing table
+
+| Task | MCP | Tool | Notes |
+|---|---|---|---|
+| Read/write a project file with explicit scoping | `unity-files` | filesystem | Preferred over implicit file access for auditability |
+| Inspect scene hierarchy, GameObjects, components | `unity-editor` | scene/gameobject | Requires Unity Editor open |
+| Create/modify GameObjects at runtime | `unity-editor` | gameobject/create | Only if Unity is running |
+| Read Unity Editor console (errors/warnings) | `unity-editor` | console | Use after code changes to verify |
+| Trigger a build or play-mode action | `unity-editor` | editor/play | Rare; usually manual |
+| Git history, blame, diff, log | `git` | git | Use for "what changed", "who wrote", "when" |
+| Commit/branch inspection before refactor | `git` | git | Always check before large changes |
+| Multi-step reasoning, planning, debugging | `sequential-thinking` | — | Use for tasks > 3 steps or ambiguous goals |
+| Recall prior decisions, in-progress work | `memory` | — | Use when user references "like before" |
+| Save a decision/fact for future sessions | `memory` | — | Only for volatile, non-obvious facts |
+| Look up live Unity API docs | `unity-docs` | search | When uncertain about an API's current signature |
+| Look up third-party library docs | `context7` | search | Only if library docs are indexed |
+| Test WebGL build in browser | `playwright` | browser | Only for WebGL builds |
+| GitHub PRs, issues, CI status | `github` | api | Only if project uses GitHub |
+| Analytics / crash reports | `sentry`, `posthog` | api | Only when investigating live issues |
+
+## Server-by-server guidance
+
+### `unity-editor` (live Unity bridge)
+
+**Use when:**
+- The user asks about the **current scene state** ("what's in the scene", "which objects have Rigidbody").
+- Creating, modifying, or deleting GameObjects/components on the fly.
+- Reading editor **console errors** after a code change.
+- Triggering Unity actions (play, build, refresh).
+
+**Never use when:**
+- Unity Editor is **not running** — check first; the connection will fail otherwise.
+- You can answer from code alone (prefer file reads — faster, no side effects).
+- The user asks about code that hasn't been compiled yet.
+
+**Guardrails:**
+- **Never** modify scene state without explicit user confirmation.
+- **Never** delete GameObjects, components, or assets without confirmation.
+- If a tool errors with "connection refused", tell the user to open Unity and stop calling.
+
+### `unity-files` (scoped filesystem)
+
+**Use when:**
+- Reading/writing `Assets/` or `ProjectSettings/` files with explicit, auditable tool calls.
+- The user asks you to "create a script", "write this shader", "update the asmdef".
+- Verifying that a file exists or contains expected content.
+
+**Never use when:**
+- You can use Cursor's native file access (it's usually faster).
+- Touching `Library/`, `Temp/`, `Logs/`, `obj/`, or build output — those are out of scope and the MCP will refuse them anyway.
+
+**Guardrails:**
+- Scope is limited to `Assets/` and `ProjectSettings/`. Do not attempt to escape it.
+- Writing files should be preceded by a clear plan.
+
+### `git`
+
+**Use when:**
+- "What changed in X?" / "When was Y last touched?" / "Who wrote Z?"
+- Investigating a regression ("what changed since last week").
+- Before a refactor — check recent history for the area.
+- Checking uncommitted changes before a risky operation.
+
+**Never use when:**
+- You can answer from code alone.
+- The user hasn't asked about history or diffs.
+
+**Guardrails:**
+- **Read-only by default.** Do not commit, push, branch, or reset without explicit user instruction.
+- If user asks to commit, confirm the message and scope first.
+
+### `sequential-thinking`
+
+**Use when:**
+- Task has **more than 3 steps** or spans multiple files/systems.
+- The problem is ambiguous or under-specified.
+- Debugging something non-obvious.
+- Designing a system or architecture.
+
+**Never use when:**
+- The task is trivial (rename a variable, fix a typo).
+- The answer is a one-liner.
+
+**Behavior:** Use it to structure reasoning, not as a substitute for asking the user clarifying questions.
+
+### `memory`
+
+**Use when:**
+- The user references a past decision ("we said we'd use X", "the dash system we built").
+- Recording a **volatile** fact — in-progress refactor, session-specific context, "don't touch X right now".
+- The user explicitly says "remember this".
+
+**Never use when:**
+- The fact belongs in `AGENTS.md`, `.cursor/rules/`, or a skill — those are the durable places.
+- The fact is a stable convention (put it in rules, not memory).
+
+**Guardrails:**
+- Never store secrets, tokens, or PII in memory.
+- Prefer rules/skills for anything that should apply to **every** session.
+
+### `unity-docs` (self-hosted Unity docs index)
+
+**Use when:**
+- You're **not certain** about a Unity API's current signature or behavior.
+- The user asks about an API added/changed recently.
+- You would otherwise hallucinate a method name or parameter.
+
+**Never use when:**
+- You already know the API with high confidence.
+- The answer exists in the local codebase.
+
+**Behavior:** If docs return nothing, say so — don't invent an API.
+
+### `context7` (third-party docs)
+
+**Use when:**
+- Looking up a **non-Unity** library (VContainer, UniTask, MessagePack, Addressables docs outside Unity).
+- The library is indexed by context7.
+
+**Never use when:**
+- Unity's own docs would answer (use `unity-docs` instead).
+- You already know the API.
+
+### `playwright` (browser automation)
+
+**Use when:**
+- Testing a **WebGL build** in a real browser.
+- The user asks to "check the web build", "screenshot the menu", "click through the tutorial".
+
+**Never use when:**
+- The project has no WebGL target.
+- The build isn't ready.
+
+### `github`
+
+**Use when:**
+- Checking CI status for a PR/branch.
+- Opening/closing issues or PRs at the user's request.
+- Searching code across the org.
+
+**Never use when:**
+- The project isn't on GitHub.
+- Local git would answer the question.
+
+**Guardrails:**
+- Do not open, close, or comment on PRs/issues without explicit confirmation.
+- Never push commits via the API — use the local git workflow.
+
+### `sentry` / `posthog`
+
+**Use when:**
+- Investigating a **live crash** the user reports.
+- Querying analytics for a specific metric or funnel.
+
+**Never use when:**
+- The issue is local/reproducible in editor.
+- The user is asking about a not-yet-shipped feature.
+
+## Cross-cutting rules
+
+1. **Minimum necessary MCP.** Don't fan out to 5 servers for a 2-step task.
+2. **Prefer local code.** MCPs are for things the codebase can't answer.
+3. **Fail loudly.** If an MCP errors, say so — don't pretend it succeeded.
+4. **Read before write.** Before any write to Unity or filesystem, read current state.
+5. **Confirm destructive actions.** Deletes, scene mutations, git writes — always ask first.
+6. **No speculative calls.** Only call an MCP when the task requires it.
+7. **Respect scope.** `unity-files` is limited to `Assets/` and `ProjectSettings/`. Don't try to escape.
+8. **Unity Editor must be running** for `unity-editor` calls. If it's not, stop and tell the user.
+
+## When MCPs conflict
+
+- **`unity-editor` vs `unity-files`** — use `unity-files` for code, `unity-editor` for live scene state.
+- **`unity-docs` vs `context7`** — Unity API → `unity-docs`; third-party → `context7`.
+- **`git` vs `github`** — local operations → `git`; remote operations → `github`.
+- **`memory` vs rules/skills** — volatile/session facts → `memory`; durable conventions → rules.
+
+## If a requested MCP isn't configured
+
+Tell the user, don't invent. Then suggest:
+
+> "This task would benefit from the `<name>` MCP server. Add it to `.cursor/mcp.json` if you want me to use it."
+
+## Anti-patterns
+
+- Calling `unity-editor` when Unity isn't open
+- Writing files via `unity-files` when Cursor's native editor would do
+- Committing/pushing via `git` MCP without user instruction
+- Storing stable conventions in `memory` instead of rules
+- Hallucinating Unity APIs instead of calling `unity-docs`
+- Fanning out to all MCPs "just in case"
+- Ignoring MCP errors and pretending success
+- Deleting GameObjects/creating objects without confirmation
+- Using `context7` for Unity APIs (wrong source)
+- Using `playwright` on a project with no WebGL build

@@ -11,7 +11,15 @@ namespace YourGame.Gameplay.Core
             // Only kill if the HITBOX touches the hazard — not the feet/body physics collider.
             if (collision.GetComponent<PlayerHitBox>() != null)
             {
-                RespawnManager.Instance.Respawn();
+                var health = collision.GetComponentInParent<PlayerHealth>();
+                if (health != null)
+                {
+                    health.TakeDamage(true);
+                }
+                else
+                {
+                    RespawnManager.Instance.Respawn();
+                }
             }
         }
 
@@ -25,7 +33,15 @@ namespace YourGame.Gameplay.Core
                 {
                     if (contact.collider.GetComponent<PlayerHitBox>() != null)
                     {
-                        RespawnManager.Instance.Respawn();
+                        var health = collision.gameObject.GetComponentInParent<PlayerHealth>();
+                        if (health != null)
+                        {
+                            health.TakeDamage(false);
+                        }
+                        else
+                        {
+                            RespawnManager.Instance.Respawn();
+                        }
                         break;
                     }
                 }
@@ -33,3 +49,4 @@ namespace YourGame.Gameplay.Core
         }
     }
 }
+

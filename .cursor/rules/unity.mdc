@@ -1,0 +1,81 @@
+---
+description: Project-wide Unity rules. Always active.
+globs: ["**/*.cs", "**/*.shader", "**/*.hlsl", "**/*.asmdef", "**/*.asset", "**/*.prefab"]
+alwaysApply: true
+---
+
+# Unity Project Rules
+
+## Language & conventions
+
+- **C# only.** PascalCase types/methods, camelCase locals, `_camelCase` private fields.
+- **`[SerializeField] private`** over public fields. Add `[Tooltip]`, `[Range]`, `[Header]`.
+- **`TryGetComponent<T>(out var c)`** over `GetComponent<T>() != null`.
+- **Cache components** in `Awake`. Never `GetComponent`/`Camera.main`/`Find*` in `Update`.
+- **Subscribe in `OnEnable`, unsubscribe in `OnDisable`** — survives pooling.
+- **`sealed`** on classes not designed for inheritance.
+- **`readonly`/`const`** wherever possible.
+
+## Hot paths — zero allocations
+
+- No `new` in `Update`, `FixedUpdate`, physics callbacks, or `OnGUI`.
+- No LINQ in per-frame code.
+- No string concatenation/interpolation in loops (use `StringBuilder`).
+- No `foreach` over `IEnumerable<T>` — iterate `List<T>` by index.
+- Cache `WaitForSeconds`, delegates, and buffers.
+- Use **`NonAlloc` physics query variants** (`RaycastNonAlloc`, `OverlapSphereNonAlloc`).
+- Use **`sqrMagnitude`** over `Distance` for comparisons.
+- **Never `Camera.main`** in `Update`.
+
+## Unity API discipline
+
+- **`Resources.Load` is banned** in shipping code. Use **Addressables**.
+- **`Instantiate`/`Destroy`** in hot loops → **object pools**.
+- **`SendMessage`/`BroadcastMessage`** banned.
+- **`Invoke("Method", 1f)`** banned — use UniTask or coroutines.
+- **`renderer.material`** in `Update` banned — use `MaterialPropertyBlock` or cache.
+- **Never mix old and new Input System** — use **New Input System**.
+- **Never set `transform.position`** on a Rigidbody — use `MovePosition`/`velocity`.
+
+## Editor code
+
+- Editor scripts live under **`Editor/`** folders or editor-only asmdefs.
+- Guard with **`#if UNITY_EDITOR`** if placed outside.
+- Every inspector mutation wrapped in **`Undo.RecordObject`**.
+- Progress bars for operations > 1 second.
+
+## Save / network
+
+- **Version every save format** (`version` field, day one).
+- **Atomic writes**: temp + replace + `.bak`.
+- **Never store `GameObject` refs** in save data — use IDs.
+- **Server authority by default.** Client sends intent, never truth.
+- **Never trust client input** for authoritative state.
+
+## Perf & platform
+
+- **Profile on target hardware**, not editor.
+- **60 FPS = 16.6 ms budget**, target ≤ 50%.
+- **URP** by default; HDRP only if explicitly required.
+- Precision: `half` on mobile, `float` where needed.
+- **Ask target platform** before optimizing.
+
+## Git hygiene
+
+- **Commit `.meta` files always.**
+- **Do not commit:** `Library/`, `Temp/`, `Logs/`, `obj/`, `Build/`, `UserSettings/`, `MemoryCaptures/`.
+- **Force Text** serialization; **Visible Meta Files**.
+- **UnityYAMLMerge** for scene/prefab conflicts.
+
+## Anti-patterns — self-check before finishing
+
+- [ ] No allocations in hot paths
+- [ ] No `Find*` / `Camera.main` / `GetComponent` in `Update`
+- [ ] No `Instantiate`/`Destroy` in loops
+- [ ] No LINQ in per-frame code
+- [ ] No `Resources` in shipping
+- [ ] Events unsubscribed on disable/destroy
+- [ ] Save data versioned + atomic writes
+- [ ] Network authority respected
+- [ ] Editor code gated (`#if UNITY_EDITOR` or editor asmdef)
+- [ ] Platform-appropriate precision/settings

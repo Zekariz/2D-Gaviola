@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "unity-game-dev",
+  "description": "Unity game development plugin — 15 personas, 22 skills, project rules, and CI/CD + mobile + shader + live-ops packs. Drop into any Unity project.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ralph Simon Gaviola"
+  },
+  "license": "MIT",
+  "keywords": [
+    "unity",
+    "game-dev",
+    "gamedev",
+    "csharp",
+    "dots",
+    "ecs",
+    "urp",
+    "hdrp",
+    "netcode",
+    "mobile",
+    "shaders",
+    "ci-cd"
+  ],
+  "homepage": "",
+  "repository": "",
+  "components": {
+    "skills": "skills/",
+    "rules": "rules/",
+    "agents": "agents/",
+    "commands": "commands/",
+    "mcp": "mcp.json"
+  }
+}

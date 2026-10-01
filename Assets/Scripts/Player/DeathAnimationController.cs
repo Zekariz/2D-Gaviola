@@ -75,5 +75,32 @@ namespace YourGame.Gameplay.Player
             player.TeleportTo(respawnPosition);
             player.IsDead = false;
         }
+
+        public IEnumerator DoHitFreeze(float freezeDuration)
+        {
+            if (_deathSprites == null || _deathSprites.Length == 0)
+            {
+                yield return new WaitForSeconds(freezeDuration);
+                yield break;
+            }
+
+            // Disable animator
+            _animator.enabled = false;
+
+            // Scale and set death0 sprite
+            transform.localScale = _originalScale * _deathScale;
+            _spriteRenderer.sprite = _deathSprites[0];
+
+            // Freeze for duration
+            yield return new WaitForSeconds(freezeDuration);
+
+            // Restore scale and re-enable animator (default pose)
+            transform.localScale = _originalScale;
+            _animator.enabled = true;
+        }
     }
 }
+
+
+ 
+
