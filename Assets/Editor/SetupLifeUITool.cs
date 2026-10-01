@@ -9,12 +9,18 @@ public class SetupLifeUITool
     [MenuItem("Tools/Setup Player Life UI")]
     public static void RunSetup()
     {
-        // 1. Find the Player
+                // 1. Find the Player
         PlayerHealth playerHealth = Object.FindAnyObjectByType<PlayerHealth>();
         if (playerHealth == null)
         {
-            Debug.LogError("[SetupLifeUI] PlayerHealth not found in scene. Please add it to your player first.");
-            return;
+            PlayerController player = Object.FindAnyObjectByType<PlayerController>();
+            if (player == null)
+            {
+                Debug.LogError("[SetupLifeUI] PlayerController not found in scene. Cannot attach PlayerHealth.");
+                return;
+            }
+            playerHealth = player.gameObject.AddComponent<PlayerHealth>();
+            Debug.Log("[SetupLifeUI] Automatically attached PlayerHealth script to the Player.");
         }
 
         // 2. Setup the Canvas
@@ -142,3 +148,4 @@ public class SetupLifeUITool
         Debug.Log("[SetupLifeUI] Player Life UI successfully generated and wired to PlayerHealth!");
     }
 }
+
