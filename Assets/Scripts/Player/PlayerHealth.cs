@@ -47,23 +47,11 @@ namespace YourGame.Gameplay.Player
             if (_isInvincible || _playerController.IsDead) return;
 
             _currentLives--;
-            
-            if (_lifeUI != null)
-                _lifeUI.LoseLife(_currentLives);
+            if (_lifeUI != null) _lifeUI.LoseLife(_currentLives);
 
-                        if (_currentLives <= 0)
+            if (_currentLives <= 0)
             {
-                if (YourGame.Gameplay.UI.GameOverUIManager.Instance != null)
-                {
-                    YourGame.Gameplay.UI.GameOverUIManager.Instance.Show();
-                }
-                else
-                {
-                    Debug.LogWarning("GameOverUIManager not found! Auto-respawning instead.");
-                    RespawnManager.Instance.Respawn();
-                    _currentLives = _maxLives; 
-                    if (_lifeUI != null) _lifeUI.Initialize(_maxLives);
-                }
+                StartCoroutine(HandleGameOverSequence());
             }
             else
             {
@@ -71,10 +59,37 @@ namespace YourGame.Gameplay.Player
             }
         }
 
+        private IEnumerator HandleGameOverSequence()
+        {
+            _playerController.IsDead = true;
+
+            if (RespawnManager.Instance != null)
+                RespawnManager.Instance.PlayDeathSound();
+
+            if (_deathAnimController != null)
+                yield return StartCoroutine(_deathAnimController.PlayDeathAnimationOnly());
+            else
+                yield return new WaitForSeconds(2f);
+
+            if (YourGame.Gameplay.UI.GameOverUIManager.Instance != null)
+            {
+                YourGame.Gameplay.UI.GameOverUIManager.Instance.Show();
+            }
+            else
+            {
+                RespawnManager.Instance.ForceRespawn();
+                _currentLives = _maxLives;
+                if (_lifeUI != null) _lifeUI.Initialize(_maxLives);
+            }
+        }
+
         private IEnumerator HandleHitSequence(bool teleportToRespawn)
         {
             _isInvincible = true;
             _playerController.SetInputEnabled(false);
+
+            if (RespawnManager.Instance != null)
+                RespawnManager.Instance.PlayDeathSound();
             
             if (_deathAnimController != null)
             {
@@ -117,5 +132,7 @@ namespace YourGame.Gameplay.Player
     }
 }
  
+
+
 
 

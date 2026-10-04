@@ -92,7 +92,7 @@ namespace YourGame.Gameplay.Core
             _player.IsDead = false;
         }
 
-        private void PlayDeathSound()
+        public void PlayDeathSound()
         {
             if (_deathSound != null)
             {

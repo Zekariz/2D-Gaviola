@@ -1,173 +1,153 @@
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using YourGame.Gameplay.UI;
 
-public class SetupGameOverUITool
+public static class SetupGameOverUITool
 {
     [MenuItem("Tools/Setup Game Over UI")]
-    public static void RunSetup()
+    public static void GenerateUI()
     {
-        // 1. Find or create the Canvas
-        GameObject canvasGO = GameObject.Find("GameOverCanvas");
-        if (canvasGO == null)
+        // 1. Find or create PlayerUICanvas
+        GameObject canvasObj = GameObject.Find("PlayerUICanvas");
+        Canvas canvas;
+        if (canvasObj == null)
         {
-            canvasGO = new GameObject("GameOverCanvas");
-            Canvas canvas = canvasGO.AddComponent<Canvas>();
+            canvasObj = new GameObject("PlayerUICanvas");
+            canvas = canvasObj.AddComponent<Canvas>();
             canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-            canvas.sortingOrder = 50; // Above HUD and other elements
-            canvasGO.AddComponent<CanvasScaler>().uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-            canvasGO.AddComponent<GraphicRaycaster>();
-        }
-
-        // 2. Setup Manager
-        GameOverUIManager manager = canvasGO.GetComponent<GameOverUIManager>();
-        if (manager == null) manager = canvasGO.AddComponent<GameOverUIManager>();
-
-        // 3. Create Dim Background
-        Transform dimTrans = canvasGO.transform.Find("DimBackground");
-        GameObject dimGO;
-        if (dimTrans == null)
-        {
-            dimGO = new GameObject("DimBackground");
-            dimGO.transform.SetParent(canvasGO.transform, false);
-            Image dimImg = dimGO.AddComponent<Image>();
-            dimImg.color = new Color(0, 0, 0, 0.75f);
+            canvas.sortingOrder = 10;
             
-            // Stretch to fill screen
-            RectTransform dimRect = dimGO.GetComponent<RectTransform>();
-            dimRect.anchorMin = Vector2.zero;
-            dimRect.anchorMax = Vector2.one;
-            dimRect.offsetMin = Vector2.zero;
-            dimRect.offsetMax = Vector2.zero;
+            CanvasScaler scaler = canvasObj.AddComponent<CanvasScaler>();
+            scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+            scaler.referenceResolution = new Vector2(1920, 1080);
+            scaler.matchWidthOrHeight = 0.5f;
+            
+            canvasObj.AddComponent<GraphicRaycaster>();
         }
         else
         {
-            dimGO = dimTrans.gameObject;
+            canvas = canvasObj.GetComponent<Canvas>();
         }
 
-        // 4. Create Content Container (Vertical layout for Banner + Buttons)
-        Transform contentTrans = dimGO.transform.Find("Content");
-        GameObject contentGO;
-        if (contentTrans == null)
-        {
-            contentGO = new GameObject("Content");
-            contentGO.transform.SetParent(dimGO.transform, false);
-            RectTransform contentRect = contentGO.AddComponent<RectTransform>();
-            contentRect.anchorMin = new Vector2(0.5f, 0.5f);
-            contentRect.anchorMax = new Vector2(0.5f, 0.5f);
-            contentRect.pivot = new Vector2(0.5f, 0.5f);
-            contentRect.anchoredPosition = Vector2.zero;
-            contentRect.sizeDelta = new Vector2(600, 400);
+        // Delete existing GameOverUI if it exists
+        Transform existing = canvasObj.transform.Find("GameOverUI");
+        if (existing != null) Object.DestroyImmediate(existing.gameObject);
 
-            VerticalLayoutGroup vLayout = contentGO.AddComponent<VerticalLayoutGroup>();
-            vLayout.childAlignment = TextAnchor.MiddleCenter;
-            vLayout.spacing = 30f;
-            vLayout.childControlWidth = false;
-            vLayout.childControlHeight = false;
-        }
-        else
-        {
-            contentGO = contentTrans.gameObject;
-        }
-
-        // Load Sprites
+        // Load Sprites correctly from slices
         Sprite bannerSprite = null;
-        Sprite exitSprite = null;
         Sprite retrySprite = null;
-        foreach (Object asset in AssetDatabase.LoadAllAssetsAtPath("Assets/Sprites/UI/game-over.png"))
+        Sprite exitSprite = null;
+
+        Object[] gameOverAssets = AssetDatabase.LoadAllAssetsAtPath("Assets/Sprites/UI/game-over.png");
+        if (gameOverAssets != null)
         {
-            if (asset is Sprite s)
+            foreach (var obj in gameOverAssets)
             {
-                if (s.name == "game-over_0") bannerSprite = s;
-                // Assuming game-over_1 is Exit (left) and game-over_2 is Retry (right) based on typical layout.
-                if (s.name == "game-over_1") exitSprite = s;
-                if (s.name == "game-over_2") retrySprite = s;
+                if (obj is Sprite s)
+                {
+                    if (s.name == "game-over_0") bannerSprite = s;
+                    if (s.name == "game-over_2") retrySprite = s;
+                }
             }
         }
 
-        // 5. Create Banner
-        Transform bannerTrans = contentGO.transform.Find("Banner");
-        GameObject bannerGO;
-        if (bannerTrans == null)
+        Object[] mainMenuAssets = AssetDatabase.LoadAllAssetsAtPath("Assets/Sprites/Menu/main-menu.png");
+        if (mainMenuAssets != null)
         {
-            bannerGO = new GameObject("Banner");
-            bannerGO.transform.SetParent(contentGO.transform, false);
-            Image bannerImg = bannerGO.AddComponent<Image>();
-            bannerImg.sprite = bannerSprite;
-            bannerImg.SetNativeSize();
-        }
-        else
-        {
-            bannerGO = bannerTrans.gameObject;
+            foreach (var obj in mainMenuAssets)
+            {
+                if (obj is Sprite s && s.name == "main-menu_5")
+                {
+                    exitSprite = s;
+                    break;
+                }
+            }
         }
 
-        // 6. Create Buttons Container
-        Transform btnContTrans = contentGO.transform.Find("ButtonsContainer");
-        GameObject btnContGO;
-        if (btnContTrans == null)
-        {
-            btnContGO = new GameObject("ButtonsContainer");
-            btnContGO.transform.SetParent(contentGO.transform, false);
-            HorizontalLayoutGroup hLayout = btnContGO.AddComponent<HorizontalLayoutGroup>();
-            hLayout.childAlignment = TextAnchor.MiddleCenter;
-            hLayout.spacing = 20f;
-            hLayout.childControlWidth = false;
-            hLayout.childControlHeight = false;
-            btnContGO.AddComponent<RectTransform>().sizeDelta = new Vector2(600, 150);
-        }
-        else
-        {
-            btnContGO = btnContTrans.gameObject;
-        }
+        // 2. Create Main Panel
+        GameObject panelObj = new GameObject("GameOverUI");
+        panelObj.transform.SetParent(canvas.transform, false);
+        RectTransform panelRect = panelObj.AddComponent<RectTransform>();
+        panelRect.anchorMin = Vector2.zero;
+        panelRect.anchorMax = Vector2.one;
+        panelRect.sizeDelta = Vector2.zero;
+        panelRect.anchoredPosition = Vector2.zero;
 
-        // 7. Create Exit Button
-        Transform exitTrans = btnContGO.transform.Find("ExitButton");
-        GameObject exitGO;
-        if (exitTrans == null)
-        {
-            exitGO = new GameObject("ExitButton");
-            exitGO.transform.SetParent(btnContGO.transform, false);
-            Image exitImg = exitGO.AddComponent<Image>();
-            exitImg.sprite = exitSprite;
-            exitImg.SetNativeSize();
-            exitGO.AddComponent<Button>();
-        }
-        else
-        {
-            exitGO = exitTrans.gameObject;
-        }
+        Image panelImg = panelObj.AddComponent<Image>();
+        panelImg.color = new Color(0, 0, 0, 0.6f); // Dark tint
 
-        // 8. Create Retry Button
-        Transform retryTrans = btnContGO.transform.Find("RetryButton");
-        GameObject retryGO;
-        if (retryTrans == null)
-        {
-            retryGO = new GameObject("RetryButton");
-            retryGO.transform.SetParent(btnContGO.transform, false);
-            Image retryImg = retryGO.AddComponent<Image>();
-            retryImg.sprite = retrySprite;
-            retryImg.SetNativeSize();
-            retryGO.AddComponent<Button>();
-        }
-        else
-        {
-            retryGO = retryTrans.gameObject;
-        }
+        // 3. Create Banner
+        GameObject bannerObj = new GameObject("Banner");
+        bannerObj.transform.SetParent(panelRect, false);
+        Image bannerImg = bannerObj.AddComponent<Image>();
+        bannerImg.sprite = bannerSprite;
+        bannerImg.preserveAspect = true;
+        
+        RectTransform bannerRect = bannerObj.GetComponent<RectTransform>();
+        bannerRect.anchorMin = new Vector2(0.5f, 0.5f);
+        bannerRect.anchorMax = new Vector2(0.5f, 0.5f);
+        bannerRect.pivot = new Vector2(0.5f, 0.5f);
+        bannerRect.anchoredPosition = new Vector2(0, 150); // Shifted up
+        bannerRect.sizeDelta = new Vector2(800, 300); // Approximate banner size
 
-        // 9. Wire Manager
+        // 4. Create Buttons Container
+        GameObject btnContainer = new GameObject("ButtonsContainer");
+        btnContainer.transform.SetParent(panelRect, false);
+        RectTransform btnContainerRect = btnContainer.AddComponent<RectTransform>();
+        btnContainerRect.anchorMin = new Vector2(0.5f, 0.5f);
+        btnContainerRect.anchorMax = new Vector2(0.5f, 0.5f);
+        btnContainerRect.pivot = new Vector2(0.5f, 0.5f);
+        btnContainerRect.anchoredPosition = new Vector2(0, -100); // Shifted down
+        btnContainerRect.sizeDelta = new Vector2(600, 100);
+
+        HorizontalLayoutGroup layout = btnContainer.AddComponent<HorizontalLayoutGroup>();
+        layout.childControlHeight = true;
+        layout.childControlWidth = true;
+        layout.childForceExpandHeight = true;
+        layout.childForceExpandWidth = true;
+        layout.spacing = 50f;
+        layout.childAlignment = TextAnchor.MiddleCenter;
+
+        // Create Exit Button
+        Button exitBtn = CreateButton("ExitButton", btnContainerRect, exitSprite);
+        // Create Retry Button
+        Button retryBtn = CreateButton("RetryButton", btnContainerRect, retrySprite);
+
+        // 5. Attach & Setup Manager
+        GameOverUIManager manager = panelObj.AddComponent<GameOverUIManager>();
+        
         SerializedObject so = new SerializedObject(manager);
-        so.FindProperty("gameOverPanel").objectReferenceValue = dimGO;
-        so.FindProperty("retryButton").objectReferenceValue = retryGO.GetComponent<Button>();
-        so.FindProperty("exitButton").objectReferenceValue = exitGO.GetComponent<Button>();
+        so.FindProperty("gameOverPanel").objectReferenceValue = panelObj;
+        so.FindProperty("exitButton").objectReferenceValue = exitBtn;
+        so.FindProperty("retryButton").objectReferenceValue = retryBtn;
         so.ApplyModifiedProperties();
 
-        // 10. Hide by default
-        dimGO.SetActive(false);
+        // 6. Delete old GameOverUIManager if it was scattered elsewhere
+        GameOverUIManager[] oldManagers = Object.FindObjectsByType<GameOverUIManager>(FindObjectsSortMode.None);
+        foreach (var oldMgr in oldManagers)
+        {
+            if (oldMgr != manager)
+            {
+                Object.DestroyImmediate(oldMgr.gameObject);
+            }
+        }
 
-        EditorUtility.SetDirty(manager);
-        UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene());
-        
-        Debug.Log("[SetupGameOverUI] Game Over UI successfully generated!");
+        Selection.activeGameObject = panelObj;
+        Undo.RegisterCreatedObjectUndo(panelObj, "Setup Game Over UI");
+        Debug.Log("[SetupGameOverUITool] Game Over UI generated successfully.");
+    }
+
+    private static Button CreateButton(string name, RectTransform parent, Sprite buttonSprite)
+    {
+        GameObject btnObj = new GameObject(name);
+        btnObj.transform.SetParent(parent, false);
+        Image bgImg = btnObj.AddComponent<Image>();
+        bgImg.sprite = buttonSprite;
+        bgImg.preserveAspect = true;
+        Button btn = btnObj.AddComponent<Button>();
+        return btn;
     }
 }
+#endif

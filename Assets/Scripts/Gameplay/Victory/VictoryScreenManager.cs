@@ -95,6 +95,10 @@ namespace YourGame.Gameplay.Victory
 
         private IEnumerator RunVictorySequence()
         {
+            // Force rendering order so overlay is behind the victory text
+            if (_darkOverlay != null) _darkOverlay.transform.SetAsFirstSibling();
+            if (_victoryImageRect != null) _victoryImageRect.SetAsLastSibling();
+
             // ── Activate hidden elements ──────────────────────────────────────
             if (_darkOverlay != null) _darkOverlay.gameObject.SetActive(true);
             if (_victoryImageRect != null)
@@ -168,3 +172,5 @@ namespace YourGame.Gameplay.Victory
         }
     }
 }
+
+
